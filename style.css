@@ -613,9 +613,7 @@ h1 {
 }
 
 
-/* =========================
-   REVIEW GRID
-========================= */
+/* REVIEW GRID */
 
 .reviews-grid {
   display: grid;
@@ -626,9 +624,7 @@ h1 {
 }
 
 
-/* =========================
-   REVIEW CARD
-========================= */
+/* REVIEW CARD */
 
 .review-card {
   position: relative;
@@ -655,15 +651,20 @@ h1 {
     box-shadow 0.35s ease;
 }
 
+
+/* Purple hover glow */
+
 .review-card::before {
   content: "";
 
   position: absolute;
 
   width: 200px;
+
   height: 200px;
 
   top: -100px;
+
   right: -80px;
 
   background: var(--purple);
@@ -676,6 +677,9 @@ h1 {
 
   pointer-events: none;
 }
+
+
+/* Hover */
 
 .review-card:hover {
   transform: translateY(-8px);
@@ -887,6 +891,9 @@ h1 {
   align-items: start;
 }
 
+
+/* LEFT */
+
 .leave-review-info h2 {
   margin-bottom: 25px;
 }
@@ -900,6 +907,9 @@ h1 {
 
   line-height: 1.8;
 }
+
+
+/* SMALL HIGHLIGHT */
 
 .review-highlight {
   margin-top: 45px;
@@ -961,6 +971,9 @@ h1 {
     0 20px 60px rgba(0, 0, 0, 0.25);
 }
 
+
+/* FORM FIELDS */
+
 .review-form input,
 .review-form select,
 .review-form textarea {
@@ -1002,6 +1015,9 @@ h1 {
   min-height: 150px;
 }
 
+
+/* FORM FOCUS */
+
 .review-form input:focus,
 .review-form select:focus,
 .review-form textarea:focus {
@@ -1010,6 +1026,9 @@ h1 {
   background: #10101a;
 }
 
+
+/* SUBMIT BUTTON */
+
 .review-form button {
   width: 100%;
 
@@ -1017,6 +1036,9 @@ h1 {
 
   margin-top: 5px;
 }
+
+
+/* REVIEW NOTE */
 
 .review-note {
   color: var(--muted);
@@ -1099,7 +1121,7 @@ form button {
 
 
 /* =========================
-   PREMIUM FOOTER
+   FOOTER
 ========================= */
 
 .site-footer {
@@ -1107,7 +1129,7 @@ form button {
 
   margin: auto;
 
-  padding: 120px 25px 30px;
+  padding: 100px 25px 25px;
 }
 
 
@@ -1116,45 +1138,17 @@ form button {
 ========================= */
 
 .footer-cta {
-  position: relative;
-
-  padding: 80px 0 100px;
+  padding: 75px 0 80px;
 
   border-top: 1px solid var(--border);
 
   border-bottom: 1px solid var(--border);
-
-  overflow: hidden;
-}
-
-.footer-cta::after {
-  content: "";
-
-  position: absolute;
-
-  width: 280px;
-  height: 280px;
-
-  right: 5%;
-  top: 20px;
-
-  background: var(--purple);
-
-  filter: blur(130px);
-
-  opacity: 0.13;
-
-  pointer-events: none;
 }
 
 .footer-cta h2 {
-  position: relative;
-
-  z-index: 1;
-
   max-width: 700px;
 
-  font-size: clamp(48px, 7vw, 82px);
+  font-size: clamp(48px, 7vw, 80px);
 
   line-height: 1;
 
@@ -1167,12 +1161,8 @@ form button {
   color: var(--purple);
 }
 
-.footer-description {
-  position: relative;
-
-  z-index: 1;
-
-  max-width: 500px;
+.footer-cta > p:not(.label) {
+  max-width: 480px;
 
   color: var(--muted);
 
@@ -1183,91 +1173,6 @@ form button {
   margin-bottom: 30px;
 }
 
-.footer-cta .btn {
-  position: relative;
-
-  z-index: 1;
-}
-
-
-/* =========================
-   BEST TESTIMONIAL
-========================= */
-
-.footer-testimonial {
-  display: grid;
-
-  grid-template-columns: 180px 1fr;
-
-  gap: 60px;
-
-  padding: 75px 0;
-
-  border-bottom: 1px solid var(--border);
-}
-
-.testimonial-label {
-  padding-top: 8px;
-}
-
-.testimonial-label span {
-  color: var(--cyan);
-
-  font-size: 10px;
-
-  font-weight: 700;
-
-  letter-spacing: 2px;
-}
-
-.testimonial-content {
-  max-width: 700px;
-}
-
-.testimonial-mark {
-  color: var(--purple);
-
-  font-size: 55px;
-
-  line-height: 0.7;
-
-  font-weight: 800;
-
-  margin-bottom: 20px;
-}
-
-.testimonial-content > p {
-  color: var(--text);
-
-  font-size: 21px;
-
-  line-height: 1.6;
-
-  letter-spacing: -0.3px;
-
-  margin-bottom: 25px;
-}
-
-.testimonial-author {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 3px;
-}
-
-.testimonial-author strong {
-  color: var(--text);
-
-  font-size: 13px;
-}
-
-.testimonial-author span {
-  color: var(--muted);
-
-  font-size: 11px;
-}
-
 
 /* =========================
    FOOTER MAIN
@@ -1276,12 +1181,15 @@ form button {
 .footer-main {
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr;
 
-  gap: 80px;
+  gap: 60px;
 
-  padding: 65px 0;
+  padding: 55px 0;
 }
+
+
+/* BRAND */
 
 .footer-logo {
   display: inline-block;
@@ -1290,15 +1198,15 @@ form button {
 
   font-weight: 800;
 
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .footer-logo span {
   color: var(--purple);
 }
 
-.footer-brand > p {
-  max-width: 280px;
+.footer-brand p {
+  max-width: 260px;
 
   color: var(--muted);
 
@@ -1308,19 +1216,9 @@ form button {
 }
 
 
-/* =========================
-   FOOTER LINKS
-========================= */
+/* FOOTER COLUMNS */
 
-.footer-links {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 40px;
-}
-
-.footer-links > div {
+.footer-column {
   display: flex;
 
   flex-direction: column;
@@ -1330,7 +1228,7 @@ form button {
   gap: 10px;
 }
 
-.footer-heading {
+.footer-column > span {
   color: var(--cyan);
 
   font-size: 10px;
@@ -1342,7 +1240,7 @@ form button {
   margin-bottom: 8px;
 }
 
-.footer-links a {
+.footer-column a {
   color: var(--muted);
 
   font-size: 13px;
@@ -1350,8 +1248,8 @@ form button {
   transition: 0.25s;
 }
 
-.footer-links a:hover {
-  color: white;
+.footer-column a:hover {
+  color: var(--text);
 
   transform: translateX(3px);
 }
@@ -1362,7 +1260,7 @@ form button {
 ========================= */
 
 .footer-bottom {
-  padding-top: 25px;
+  padding-top: 22px;
 
   border-top: 1px solid var(--border);
 
@@ -1579,54 +1477,42 @@ form button {
   }
 
 
-  /* PREMIUM FOOTER */
+  /* FOOTER */
 
   .site-footer {
-    padding: 80px 20px 25px;
+    padding: 75px 20px 20px;
   }
 
   .footer-cta {
-    padding: 60px 0 70px;
+    padding: 55px 0 65px;
   }
 
   .footer-cta h2 {
-    font-size: clamp(45px, 13vw, 65px);
+    font-size: clamp(45px, 13vw, 64px);
 
     letter-spacing: -2px;
   }
 
-  .footer-description {
+  .footer-cta > p:not(.label) {
     font-size: 14px;
   }
 
-  .footer-testimonial {
-    grid-template-columns: 1fr;
-
-    gap: 25px;
-
-    padding: 55px 0;
-  }
-
-  .testimonial-content > p {
-    font-size: 18px;
-  }
-
   .footer-main {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
 
-    gap: 45px;
+    gap: 40px;
 
-    padding: 50px 0;
+    padding: 45px 0;
   }
 
-  .footer-links {
-    gap: 25px;
+  .footer-brand {
+    grid-column: span 2;
   }
 
   .footer-bottom {
     flex-direction: column;
 
-    gap: 8px;
+    gap: 7px;
 
     line-height: 1.6;
   }
