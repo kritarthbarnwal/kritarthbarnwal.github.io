@@ -1121,7 +1121,7 @@ form button {
 
 
 /* =========================
-   FOOTER
+   PREMIUM FOOTER
 ========================= */
 
 .site-footer {
@@ -1129,94 +1129,113 @@ form button {
 
   margin: auto;
 
-  padding: 100px 25px 25px;
+  padding: 80px 25px 25px;
 }
 
 
 /* =========================
-   FOOTER CTA
-========================= */
-
-.footer-cta {
-  padding: 75px 0 80px;
-
-  border-top: 1px solid var(--border);
-
-  border-bottom: 1px solid var(--border);
-}
-
-.footer-cta h2 {
-  max-width: 700px;
-
-  font-size: clamp(48px, 7vw, 80px);
-
-  line-height: 1;
-
-  letter-spacing: -4px;
-
-  margin-bottom: 25px;
-}
-
-.footer-cta h2 span {
-  color: var(--purple);
-}
-
-.footer-cta > p:not(.label) {
-  max-width: 480px;
-
-  color: var(--muted);
-
-  font-size: 15px;
-
-  line-height: 1.8;
-
-  margin-bottom: 30px;
-}
-
-
-/* =========================
-   FOOTER MAIN
+   FOOTER CARD
 ========================= */
 
 .footer-main {
+  position: relative;
+
+  padding: 45px 50px 25px;
+
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 18px;
+
+  overflow: hidden;
+}
+
+
+/* SUBTLE PREMIUM GLOW */
+
+.footer-main::before {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  top: -150px;
+  right: -70px;
+
+  background: var(--purple);
+
+  filter: blur(100px);
+
+  opacity: 0.08;
+
+  pointer-events: none;
+}
+
+
+/* =========================
+   FOOTER CONTENT
+========================= */
+
+.footer-content {
+  position: relative;
+
+  z-index: 1;
+
   display: grid;
 
   grid-template-columns: 1.5fr 1fr 1fr;
 
-  gap: 60px;
+  gap: 70px;
 
-  padding: 55px 0;
+  align-items: start;
 }
 
 
-/* BRAND */
+/* =========================
+   BRAND
+========================= */
 
 .footer-logo {
   display: inline-block;
 
-  font-size: 32px;
+  font-size: 42px;
+
+  line-height: 1;
 
   font-weight: 800;
 
-  margin-bottom: 12px;
+  margin-bottom: 18px;
 }
 
 .footer-logo span {
   color: var(--purple);
 }
 
-.footer-brand p {
-  max-width: 260px;
-
-  color: var(--muted);
+.footer-brand h3 {
+  color: var(--text);
 
   font-size: 13px;
 
-  line-height: 1.7;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  margin-bottom: 3px;
+}
+
+.footer-brand p {
+  color: var(--muted);
+
+  font-size: 12px;
 }
 
 
-/* FOOTER COLUMNS */
+/* =========================
+   FOOTER COLUMNS
+========================= */
 
 .footer-column {
   display: flex;
@@ -1225,7 +1244,7 @@ form button {
 
   align-items: flex-start;
 
-  gap: 10px;
+  gap: 11px;
 }
 
 .footer-column > span {
@@ -1245,7 +1264,7 @@ form button {
 
   font-size: 13px;
 
-  transition: 0.25s;
+  transition: 0.25s ease;
 }
 
 .footer-column a:hover {
@@ -1260,7 +1279,13 @@ form button {
 ========================= */
 
 .footer-bottom {
-  padding-top: 22px;
+  position: relative;
+
+  z-index: 1;
+
+  margin-top: 45px;
+
+  padding-top: 20px;
 
   border-top: 1px solid var(--border);
 
@@ -1272,7 +1297,7 @@ form button {
 
   color: var(--muted);
 
-  font-size: 11px;
+  font-size: 10px;
 }
 
 
@@ -1480,39 +1505,33 @@ form button {
   /* FOOTER */
 
   .site-footer {
-    padding: 75px 20px 20px;
-  }
-
-  .footer-cta {
-    padding: 55px 0 65px;
-  }
-
-  .footer-cta h2 {
-    font-size: clamp(45px, 13vw, 64px);
-
-    letter-spacing: -2px;
-  }
-
-  .footer-cta > p:not(.label) {
-    font-size: 14px;
+    padding: 60px 20px 20px;
   }
 
   .footer-main {
+    padding: 35px 25px 20px;
+  }
+
+  .footer-content {
     grid-template-columns: 1fr 1fr;
 
-    gap: 40px;
-
-    padding: 45px 0;
+    gap: 35px;
   }
 
   .footer-brand {
     grid-column: span 2;
   }
 
+  .footer-logo {
+    font-size: 38px;
+  }
+
   .footer-bottom {
+    margin-top: 35px;
+
     flex-direction: column;
 
-    gap: 7px;
+    gap: 6px;
 
     line-height: 1.6;
   }
