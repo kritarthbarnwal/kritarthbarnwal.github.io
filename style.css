@@ -1335,3 +1335,212 @@ footer div {
 
 }
 
+
+/* =========================
+   LEAVE A REVIEW
+========================= */
+
+.leave-review-section {
+  border-top: 1px solid var(--border);
+}
+
+.leave-review-grid {
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 100px;
+
+  align-items: start;
+}
+
+
+/* LEFT SIDE */
+
+.leave-review-info h2 {
+  margin-bottom: 25px;
+}
+
+.leave-review-info > p:not(.label) {
+  color: var(--muted);
+
+  max-width: 440px;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* REVIEW POINTS */
+
+.review-points {
+  margin-top: 45px;
+
+  display: grid;
+
+  gap: 15px;
+}
+
+.review-points div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.review-points span {
+  color: var(--cyan);
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.review-points p {
+  color: var(--text);
+
+  font-size: 13px;
+
+  margin: 0;
+}
+
+
+/* FORM */
+
+.review-form {
+  padding: 30px;
+
+  display: grid;
+
+  gap: 13px;
+
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 18px;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.review-form:hover {
+  border-color: #3a3154;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+
+/* INPUTS */
+
+.review-form input,
+.review-form select,
+.review-form textarea {
+  width: 100%;
+
+  background: #0d0d14;
+
+  border: 1px solid var(--border);
+
+  color: var(--text);
+
+  padding: 15px;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  font: inherit;
+
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.review-form input::placeholder,
+.review-form textarea::placeholder {
+  color: #64748b;
+}
+
+.review-form select {
+  color: var(--muted);
+}
+
+.review-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+
+/* FOCUS */
+
+.review-form input:focus,
+.review-form select:focus,
+.review-form textarea:focus {
+  border-color: var(--purple);
+
+  background: #10101a;
+}
+
+
+/* BUTTON */
+
+.review-form button {
+  width: 100%;
+
+  border: 0;
+
+  margin-top: 5px;
+}
+
+
+/* NOTE */
+
+.review-note {
+  color: var(--muted);
+
+  font-size: 11px;
+
+  text-align: center;
+
+  margin: 3px 0 0;
+}
+
+
+/* =========================
+   REVIEW FORM MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+  .leave-review-grid {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .review-form {
+    padding: 20px;
+  }
+
+  .review-points {
+    margin-top: 30px;
+  }
+
+}
+
