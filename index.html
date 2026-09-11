@@ -477,7 +477,120 @@
 
 </section>
 
+<!-- LEAVE A REVIEW -->
+<section id="leave-review" class="section leave-review-section">
 
+  <div class="leave-review-grid">
+
+    <!-- LEFT -->
+    <div class="leave-review-info">
+
+      <p class="label">06 — LEAVE A REVIEW</p>
+
+      <h2>
+        Worked with me?<br>
+        <span>Tell me how it went.</span>
+      </h2>
+
+      <p>
+        Your feedback helps me improve my work and gives future
+        clients a better idea of what it's like to work together.
+      </p>
+
+      <div class="review-points">
+        <div>
+          <span>01</span>
+          <p>Share your experience</p>
+        </div>
+
+        <div>
+          <span>02</span>
+          <p>Rate the project</p>
+        </div>
+
+        <div>
+          <span>03</span>
+          <p>Help others choose</p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- RIGHT -->
+    <form
+      action="https://formspree.io/f/meaqndrw"
+      method="POST"
+      class="review-form"
+    >
+
+      <input
+        type="hidden"
+        name="_subject"
+        value="New Client Review"
+      >
+
+      <input
+        type="text"
+        name="name"
+        placeholder="Your name"
+        required
+      >
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Your email"
+        required
+      >
+
+      <select name="project" required>
+        <option value="" disabled selected>
+          What did we work on?
+        </option>
+
+        <option>Landing Page</option>
+        <option>Business Website</option>
+        <option>Portfolio Website</option>
+        <option>Website Redesign</option>
+        <option>Other</option>
+      </select>
+
+      <select name="rating" required>
+        <option value="" disabled selected>
+          Your rating
+        </option>
+
+        <option>★★★★★ — 5 stars</option>
+        <option>★★★★☆ — 4 stars</option>
+        <option>★★★☆☆ — 3 stars</option>
+        <option>★★☆☆☆ — 2 stars</option>
+        <option>★☆☆☆☆ — 1 star</option>
+      </select>
+
+      <textarea
+        name="review"
+        placeholder="Write your review..."
+        rows="6"
+        required
+      ></textarea>
+
+      <button
+        type="submit"
+        class="btn primary"
+      >
+        Submit Review ↗
+      </button>
+
+      <p class="review-note">
+        Reviews are reviewed before being featured on this website.
+      </p>
+
+    </form>
+
+  </div>
+
+</section>
 
 
    
@@ -486,7 +599,7 @@
     <!-- CONTACT -->
     <section id="contact" class="section contact">
       <div>
-        <p class="label">06 — CONTACT</p>
+        <p class="label">07 — CONTACT</p>
         <h2>Have an idea?<br><span>Let's build it.</span></h2>
         <p class="contact-text">
           Tell me a little about your project and I'll get back to you.
