@@ -5,12 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO -->
-  <title>Kritarth — Web Developer</title>
+  <!-- =========================
+       SEO
+  ========================== -->
+
+  <title>Kritarth Dev — Web Developer &amp; Website Designer</title>
 
   <meta
     name="description"
-    content="Kritarth is a web developer creating fast, modern and responsive websites for creators, students and small businesses."
+    content="Kritarth Dev is a web developer creating fast, modern and responsive websites for creators, students and small businesses."
   >
 
   <meta name="author" content="Kritarth">
@@ -21,13 +24,20 @@
     href="https://kritarthbarnwal.github.io/kritarthdev/"
   >
 
-  <!-- Open Graph -->
+  <!-- =========================
+       OPEN GRAPH
+  ========================== -->
+
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Kritarth — Web Developer">
+
+  <meta
+    property="og:title"
+    content="Kritarth Dev — Web Developer &amp; Website Designer"
+  >
 
   <meta
     property="og:description"
-    content="Fast, modern and responsive websites built by Kritarth."
+    content="Kritarth Dev creates fast, modern and responsive websites for creators, students and small businesses."
   >
 
   <meta
@@ -35,30 +45,70 @@
     content="https://kritarthbarnwal.github.io/kritarthdev/"
   >
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <!-- =========================
+       FAVICON
+  ========================== -->
 
-  <!-- Schema.org -->
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="512x512"
+    href="kritarth-dev-favicon-512.png"
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="48x48"
+    href="kritarth-dev-favicon-48.png"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="kritarth-dev-favicon-512.png"
+  >
+
+  <!-- =========================
+       WEBSITE SCHEMA
+  ========================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Kritarth Dev",
+    "alternateName": "Kritarth",
+    "url": "https://kritarthbarnwal.github.io/kritarthdev/"
+  }
+  </script>
+
+  <!-- =========================
+       PERSON SCHEMA
+  ========================== -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Kritarth",
+    "alternateName": "Kritarth Dev",
     "url": "https://kritarthbarnwal.github.io/kritarthdev/",
     "jobTitle": "Web Developer",
-    "description": "Web developer creating fast, modern and responsive websites.",
+    "description": "Web developer creating fast, modern and responsive websites for creators, students and small businesses.",
     "knowsAbout": [
       "Web Development",
       "HTML",
       "CSS",
       "JavaScript",
       "Responsive Design",
-      "UI Design"
+      "UI Design",
+      "Website Design"
     ]
   }
   </script>
 
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 
@@ -264,7 +314,7 @@
         <span>CSS</span>
         <span>JavaScript</span>
         <span>Responsive Design</span>
-        <span>Git & GitHub</span>
+        <span>Git &amp; GitHub</span>
         <span>UI Design</span>
 
       </div>
@@ -811,16 +861,12 @@
           id="review-form"
         >
 
-          <!-- Email subject -->
-
           <input
             type="hidden"
             name="_subject"
             value="New Client Review"
           >
 
-
-          <!-- NAME -->
 
           <input
             type="text"
@@ -830,8 +876,6 @@
           >
 
 
-          <!-- EMAIL -->
-
           <input
             type="email"
             name="email"
@@ -839,8 +883,6 @@
             required
           >
 
-
-          <!-- PROJECT -->
 
           <select
             name="project"
@@ -878,8 +920,6 @@
           </select>
 
 
-          <!-- RATING -->
-
           <select
             name="rating"
             required
@@ -916,8 +956,6 @@
           </select>
 
 
-          <!-- REVIEW -->
-
           <textarea
             name="review"
             placeholder="Write your review..."
@@ -925,8 +963,6 @@
             required
           ></textarea>
 
-
-          <!-- SUBMIT -->
 
           <button
             type="submit"
@@ -936,14 +972,10 @@
           </button>
 
 
-          <!-- REVIEW NOTE -->
-
           <p class="review-note">
             Reviews are reviewed before being featured on this website.
           </p>
 
-
-          <!-- REVIEW SUCCESS / ERROR -->
 
           <p
             id="review-status"
@@ -994,8 +1026,6 @@
         id="contact-form"
       >
 
-        <!-- NAME -->
-
         <input
           type="text"
           name="name"
@@ -1004,8 +1034,6 @@
         >
 
 
-        <!-- EMAIL -->
-
         <input
           type="email"
           name="email"
@@ -1013,8 +1041,6 @@
           required
         >
 
-
-        <!-- PROJECT -->
 
         <select
           name="project"
@@ -1052,8 +1078,6 @@
         </select>
 
 
-        <!-- MESSAGE -->
-
         <textarea
           name="message"
           placeholder="Tell me about your project..."
@@ -1062,8 +1086,6 @@
         ></textarea>
 
 
-        <!-- SUBMIT -->
-
         <button
           type="submit"
           class="btn primary"
@@ -1071,8 +1093,6 @@
           Send Message ↗
         </button>
 
-
-        <!-- CONTACT STATUS -->
 
         <p id="form-status"></p>
 
@@ -1104,7 +1124,7 @@
           </a>
 
           <h3>
-            KRITARTH
+            KRITARTH DEV
           </h3>
 
           <p>
@@ -1167,7 +1187,7 @@
       <div class="footer-bottom">
 
         <p>
-          © 2026 Kritarth
+          © 2026 Kritarth Dev
         </p>
 
         <p>
@@ -1182,7 +1202,9 @@
 
 
 
-  <!-- JAVASCRIPT -->
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
 
   <script src="script.js"></script>
 
