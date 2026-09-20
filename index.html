@@ -29,6 +29,7 @@
   ========================== -->
 
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kritarth Dev">
 
   <meta
     property="og:title"
@@ -43,6 +44,20 @@
   <meta
     property="og:url"
     content="https://kritarthbarnwal.github.io/kritarthdev/"
+  >
+
+  <!-- =========================
+       TWITTER / SOCIAL SHARING
+  ========================== -->
+
+  <meta name="twitter:card" content="summary">
+  <meta
+    name="twitter:title"
+    content="Kritarth Dev — Web Developer &amp; Website Designer"
+  >
+  <meta
+    name="twitter:description"
+    content="Modern, responsive websites designed and built by Kritarth Dev."
   >
 
   <!-- =========================
@@ -118,10 +133,128 @@
   }
   </script>
 
+  <!-- =========================
+       WEB PAGE SCHEMA
+  ========================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://kritarthbarnwal.github.io/kritarthdev/#webpage",
+    "url": "https://kritarthbarnwal.github.io/kritarthdev/",
+    "name": "Kritarth Dev — Web Developer & Website Designer",
+    "description": "Kritarth Dev is a web developer and website designer from India creating fast, modern and responsive websites for creators, students and small businesses.",
+    "isPartOf": {
+      "@id": "https://kritarthbarnwal.github.io/kritarthdev/#website"
+    },
+    "about": {
+      "@id": "https://kritarthbarnwal.github.io/kritarthdev/#kritarth"
+    }
+  }
+  </script>
+
+  <!-- =========================
+       FAQ STYLES
+  ========================== -->
+
+  <style>
+    .faq-section {
+      position: relative;
+    }
+
+    .faq-heading {
+      max-width: 720px;
+      margin-bottom: 45px;
+    }
+
+    .faq-heading h2 {
+      margin-bottom: 15px;
+    }
+
+    .faq-heading p {
+      color: var(--muted);
+      max-width: 620px;
+      line-height: 1.8;
+    }
+
+    .faq-list {
+      max-width: 900px;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 24px 45px 24px 0;
+      position: relative;
+      color: var(--text);
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      position: absolute;
+      right: 5px;
+      top: 22px;
+      color: var(--purple);
+      font-size: 22px;
+      font-weight: 400;
+      transition: 0.25s ease;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      padding: 0 45px 25px 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+      max-width: 780px;
+    }
+
+    .faq-answer a {
+      color: var(--cyan);
+      transition: 0.25s ease;
+    }
+
+    .faq-answer a:hover {
+      color: var(--text);
+    }
+
+    @media (max-width: 700px) {
+      .faq-item summary {
+        padding: 20px 35px 20px 0;
+        font-size: 15px;
+      }
+
+      .faq-item summary::after {
+        top: 18px;
+      }
+
+      .faq-answer {
+        padding: 0 25px 22px 0;
+        font-size: 13px;
+      }
+    }
+  </style>
+
   <link rel="stylesheet" href="style.css">
 
 </head>
-
 
 
 <body>
@@ -144,6 +277,7 @@
         <a href="#work">Work</a>
         <a href="#services">Services</a>
         <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
 
       </div>
@@ -157,9 +291,7 @@
   </header>
 
 
-
   <main>
-
 
 
     <!-- =========================
@@ -180,7 +312,7 @@
         </h1>
 
         <p class="hero-text">
-          I'm <strong>Kritarth</strong>, a web developer and website
+          I'm <strong>Kritarth Dev</strong>, a web developer and website
           designer from India creating fast, responsive and modern
           websites for creators, students and small businesses.
         </p>
@@ -200,7 +332,6 @@
       </div>
 
 
-
       <!-- PREMIUM CODE CARD -->
 
       <div class="hero-card">
@@ -212,7 +343,6 @@
           <span></span>
 
         </div>
-
 
 
         <div class="code">
@@ -266,7 +396,6 @@
         </div>
 
 
-
         <div class="card-status">
 
           <span class="status-dot"></span>
@@ -278,16 +407,12 @@
       </div>
 
 
-
       <!-- BACKGROUND ORBS -->
 
       <div class="orb orb-1"></div>
       <div class="orb orb-2"></div>
 
     </section>
-
-
-
 
 
     <!-- =========================
@@ -306,7 +431,6 @@
           Young developer.<br>
           <span>Big ambitions.</span>
         </h2>
-
 
 
         <div>
@@ -328,9 +452,6 @@
       </div>
 
     </section>
-
-
-
 
 
     <!-- =========================
@@ -371,9 +492,6 @@
     </section>
 
 
-
-
-
     <!-- =========================
          WORK
     ========================== -->
@@ -389,9 +507,7 @@
       </h2>
 
 
-
       <div class="projects">
-
 
 
         <!-- RANG -->
@@ -407,12 +523,11 @@
 
             <img
               src="assets/rang-preview.jpg"
-              alt="RANG Indian restaurant website concept"
+              alt="RANG Indian restaurant website concept by Kritarth Dev"
               loading="lazy"
             >
 
           </div>
-
 
 
           <div class="project-info">
@@ -438,9 +553,6 @@
         </a>
 
 
-
-
-
         <!-- NOIRÉ -->
 
         <a
@@ -454,12 +566,11 @@
 
             <img
               src="assets/noire-preview.jpg"
-              alt="NOIRÉ contemporary fashion website concept"
+              alt="NOIRÉ contemporary fashion website concept by Kritarth Dev"
               loading="lazy"
             >
 
           </div>
-
 
 
           <div class="project-info">
@@ -471,7 +582,7 @@
               </h3>
 
               <p>
-                Contemporary fashion brand website
+                Contemporary fashion brand website concept
               </p>
 
             </div>
@@ -483,9 +594,6 @@
           </div>
 
         </a>
-
-
-
 
 
         <!-- HAVEN -->
@@ -501,12 +609,11 @@
 
             <img
               src="assets/haven-preview.jpg"
-              alt="HAVEN luxury real estate website concept"
+              alt="HAVEN luxury real estate website concept by Kritarth Dev"
               loading="lazy"
             >
 
           </div>
-
 
 
           <div class="project-info">
@@ -536,9 +643,6 @@
     </section>
 
 
-
-
-
     <!-- =========================
          SERVICES
     ========================== -->
@@ -554,9 +658,7 @@
       </h2>
 
 
-
       <div class="services">
-
 
 
         <!-- SERVICE 01 -->
@@ -579,9 +681,6 @@
         </div>
 
 
-
-
-
         <!-- SERVICE 02 -->
 
         <div class="service">
@@ -600,9 +699,6 @@
           </p>
 
         </div>
-
-
-
 
 
         <!-- SERVICE 03 -->
@@ -629,9 +725,6 @@
     </section>
 
 
-
-
-
     <!-- =========================
          CLIENT REVIEWS
     ========================== -->
@@ -646,7 +739,6 @@
       </p>
 
 
-
       <div class="reviews-heading">
 
         <div>
@@ -659,7 +751,6 @@
         </div>
 
 
-
         <p>
           Great websites are built around great collaboration.
           Here's where genuine client feedback will live.
@@ -668,13 +759,9 @@
       </div>
 
 
-
-
-
       <!-- REVIEW CARDS -->
 
       <div class="reviews-grid">
-
 
 
         <!-- REVIEW CARD 01 -->
@@ -694,7 +781,6 @@
           </div>
 
 
-
           <div class="review-content">
 
             <div class="review-mark">
@@ -711,7 +797,6 @@
             </p>
 
           </div>
-
 
 
           <div class="review-author">
@@ -737,9 +822,6 @@
         </article>
 
 
-
-
-
         <!-- REVIEW CARD 02 -->
 
         <article class="review-card">
@@ -755,7 +837,6 @@
             </div>
 
           </div>
-
 
 
           <div class="review-content">
@@ -774,7 +855,6 @@
             </p>
 
           </div>
-
 
 
           <div class="review-author">
@@ -800,9 +880,6 @@
         </article>
 
 
-
-
-
         <!-- REVIEW CARD 03 -->
 
         <article class="review-card">
@@ -818,7 +895,6 @@
             </div>
 
           </div>
-
 
 
           <div class="review-content">
@@ -837,7 +913,6 @@
             </p>
 
           </div>
-
 
 
           <div class="review-author">
@@ -865,9 +940,6 @@
       </div>
 
 
-
-
-
       <!-- REVIEW CTA -->
 
       <div class="review-cta">
@@ -885,7 +957,6 @@
         </div>
 
 
-
         <a
           href="#leave-review"
           class="btn primary"
@@ -898,9 +969,6 @@
     </section>
 
 
-
-
-
     <!-- =========================
          LEAVE A REVIEW
     ========================== -->
@@ -911,7 +979,6 @@
     >
 
       <div class="leave-review-grid">
-
 
 
         <!-- LEFT -->
@@ -933,7 +1000,6 @@
           </p>
 
 
-
           <div class="review-highlight">
 
             <span>
@@ -947,9 +1013,6 @@
           </div>
 
         </div>
-
-
-
 
 
         <!-- RIGHT / REVIEW FORM -->
@@ -968,7 +1031,6 @@
           >
 
 
-
           <input
             type="text"
             name="name"
@@ -977,14 +1039,12 @@
           >
 
 
-
           <input
             type="email"
             name="email"
             placeholder="Your email"
             required
           >
-
 
 
           <select
@@ -1023,7 +1083,6 @@
           </select>
 
 
-
           <select
             name="rating"
             required
@@ -1060,14 +1119,12 @@
           </select>
 
 
-
           <textarea
             name="review"
             placeholder="Write your review..."
             rows="6"
             required
           ></textarea>
-
 
 
           <button
@@ -1078,11 +1135,9 @@
           </button>
 
 
-
           <p class="review-note">
             Reviews are reviewed before being featured on this website.
           </p>
-
 
 
           <p
@@ -1097,7 +1152,195 @@
     </section>
 
 
+    <!-- =========================
+         FAQ
+    ========================== -->
 
+    <section
+      id="faq"
+      class="section faq-section"
+    >
+
+      <p class="label">
+        07 — FAQ
+      </p>
+
+
+      <div class="faq-heading">
+
+        <h2>
+          Questions about <span>websites?</span>
+        </h2>
+
+        <p>
+          Here are answers to some common questions about website design,
+          development, pricing, responsive design and working with Kritarth Dev.
+        </p>
+
+      </div>
+
+
+      <div class="faq-list">
+
+
+        <!-- FAQ 01 -->
+
+        <details class="faq-item">
+
+          <summary>
+            What kind of websites do you build?
+          </summary>
+
+          <div class="faq-answer">
+
+            I build modern, responsive websites for creators, students,
+            personal brands and small businesses. This includes landing pages,
+            business websites, portfolio websites and website redesigns.
+
+          </div>
+
+        </details>
+
+
+        <!-- FAQ 02 -->
+
+        <details class="faq-item">
+
+          <summary>
+            How much does a website cost?
+          </summary>
+
+          <div class="faq-answer">
+
+            Website pricing depends on the number of pages, design requirements,
+            features and overall project scope. I provide a clear quote after
+            understanding what you need. You can
+            <a href="#contact">contact me</a>
+            with your project details to discuss it.
+
+          </div>
+
+        </details>
+
+
+        <!-- FAQ 03 -->
+
+        <details class="faq-item">
+
+          <summary>
+            Will my website work on mobile phones?
+          </summary>
+
+          <div class="faq-answer">
+
+            Yes. Responsive design is an important part of the websites I build.
+            The layout is designed to work across mobile phones, tablets and
+            desktop screens.
+
+          </div>
+
+        </details>
+
+
+        <!-- FAQ 04 -->
+
+        <details class="faq-item">
+
+          <summary>
+            How long does a website take to build?
+          </summary>
+
+          <div class="faq-answer">
+
+            A typical small website can take around 5–10 days depending on
+            the number of pages, content, design requirements and features.
+            Larger or more detailed projects may take longer.
+
+          </div>
+
+        </details>
+
+
+        <!-- FAQ 05 -->
+
+        <details class="faq-item">
+
+          <summary>
+            Can you redesign an existing website?
+          </summary>
+
+          <div class="faq-answer">
+
+            Yes. I can redesign an existing website with a more modern visual
+            style, responsive layouts, clearer structure and improved user
+            experience.
+
+          </div>
+
+        </details>
+
+
+        <!-- FAQ 06 -->
+
+        <details class="faq-item">
+
+          <summary>
+            Do you build websites for small businesses?
+          </summary>
+
+          <div class="faq-answer">
+
+            Yes. I create professional websites for small businesses that want
+            a stronger online presence and a clear way for customers to learn
+            about their services and get in touch.
+
+          </div>
+
+        </details>
+
+
+        <!-- FAQ 07 -->
+
+        <details class="faq-item">
+
+          <summary>
+            Can you help deploy my website?
+          </summary>
+
+          <div class="faq-answer">
+
+            Yes. I can help prepare and deploy a website so it is ready to be
+            accessed online. I can also help with the basic setup needed for
+            a website hosted through services such as GitHub Pages.
+
+          </div>
+
+        </details>
+
+
+        <!-- FAQ 08 -->
+
+        <details class="faq-item">
+
+          <summary>
+            How can I start a website project with you?
+          </summary>
+
+          <div class="faq-answer">
+
+            Start by sending me a message through the
+            <a href="#contact">contact form</a>
+            with a few details about your project, what kind of website you need
+            and what you want it to achieve. I'll get back to you from there.
+
+          </div>
+
+        </details>
+
+
+      </div>
+
+    </section>
 
 
     <!-- =========================
@@ -1112,7 +1355,7 @@
       <div>
 
         <p class="label">
-          07 — CONTACT
+          08 — CONTACT
         </p>
 
         <h2>
@@ -1125,9 +1368,6 @@
         </p>
 
       </div>
-
-
-
 
 
       <!-- CONTACT FORM -->
@@ -1146,14 +1386,12 @@
         >
 
 
-
         <input
           type="email"
           name="email"
           placeholder="Your email"
           required
         >
-
 
 
         <select
@@ -1192,7 +1430,6 @@
         </select>
 
 
-
         <textarea
           name="message"
           placeholder="Tell me about your project..."
@@ -1201,14 +1438,12 @@
         ></textarea>
 
 
-
         <button
           type="submit"
           class="btn primary"
         >
           Send Message ↗
         </button>
-
 
 
         <p id="form-status"></p>
@@ -1220,9 +1455,6 @@
   </main>
 
 
-
-
-
   <!-- =========================
        FOOTER
   ========================== -->
@@ -1232,7 +1464,6 @@
     <div class="footer-main">
 
       <div class="footer-content">
-
 
 
         <!-- BRAND -->
@@ -1252,7 +1483,6 @@
           </p>
 
         </div>
-
 
 
         <!-- NAVIGATION -->
@@ -1275,12 +1505,15 @@
             Services
           </a>
 
+          <a href="#faq">
+            FAQ
+          </a>
+
           <a href="#contact">
             Contact
           </a>
 
         </div>
-
 
 
         <!-- SOCIAL -->
@@ -1304,7 +1537,6 @@
       </div>
 
 
-
       <!-- FOOTER BOTTOM -->
 
       <div class="footer-bottom">
@@ -1322,9 +1554,6 @@
     </div>
 
   </footer>
-
-
-
 
 
   <!-- =========================
