@@ -4,132 +4,446 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>RANG — Indian Kitchen</title>
-  <meta name="description" content="RANG — A modern Indian dining experience.">
+  <title>RANG — Modern Indian Kitchen</title>
+  <meta
+    name="description"
+    content="RANG — A modern Indian dining experience celebrating bold spices, timeless recipes and warm hospitality."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <header>
-    <nav>
-      <a href="#" class="logo">RANG</a>
+  <!-- NAVIGATION -->
 
-      <div class="links">
+  <header class="site-header" id="siteHeader">
+    <nav class="nav">
+
+      <a href="#" class="logo" aria-label="RANG home">
+        RANG<span>.</span>
+      </a>
+
+      <div class="nav-links">
         <a href="#story">Our Story</a>
         <a href="#menu">Menu</a>
+        <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </div>
 
-      <a href="#contact" class="reserve">Reserve a Table</a>
+      <a href="#contact" class="nav-reserve">
+        Reserve <span>↗</span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
     </nav>
+
+    <div class="mobile-menu">
+      <a href="#story">Our Story</a>
+      <a href="#menu">Menu</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
   </header>
+
 
   <main>
 
     <!-- HERO -->
+
     <section class="hero">
 
-      <div class="hero-overlay"></div>
+      <div class="hero-image"></div>
+      <div class="hero-gradient"></div>
 
       <div class="hero-content">
-        <p class="eyebrow">AUTHENTIC INDIAN CUISINE</p>
 
-        <h1>
-          A taste of
-          <span>India.</span>
-        </h1>
+        <div class="hero-top reveal">
+          <span class="eyebrow">AUTHENTIC INDIAN CUISINE</span>
+          <span class="hero-location">EST. 2026 · INDIA</span>
+        </div>
 
-        <p class="intro">
-          Bold spices, timeless recipes and warm hospitality —
-          served in the heart of the city.
-        </p>
+        <div class="hero-main">
 
-        <a href="#menu" class="button">Explore Our Menu ↗</a>
+          <p class="hero-small reveal">
+            Where tradition<br>
+            meets the table.
+          </p>
+
+          <h1 class="reveal">
+            A taste of
+            <em>India.</em>
+          </h1>
+
+          <p class="hero-description reveal">
+            Bold spices, timeless recipes and warm hospitality —
+            thoughtfully brought together for the modern table.
+          </p>
+
+          <a href="#menu" class="primary-button reveal">
+            <span>Explore the menu</span>
+            <span>↗</span>
+          </a>
+
+        </div>
+
+        <div class="hero-bottom reveal">
+          <span>SCROLL TO DISCOVER</span>
+          <span class="scroll-line"></span>
+        </div>
+
       </div>
 
     </section>
 
+
+    <!-- INTRO / STATS -->
+
+    <section class="intro-section">
+
+      <div class="intro-grid">
+
+        <div class="section-number reveal">
+          01
+        </div>
+
+        <div class="intro-copy reveal">
+          <p class="section-label">THE RANG PHILOSOPHY</p>
+
+          <h2>
+            Food with
+            <span>a story.</span>
+          </h2>
+
+          <p class="large-copy">
+            We believe Indian food is more than a collection of flavours.
+            It is memory, celebration, family and culture — brought to life
+            one plate at a time.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="stats reveal">
+
+        <div>
+          <strong>20+</strong>
+          <span>Signature dishes</span>
+        </div>
+
+        <div>
+          <strong>12</strong>
+          <span>Regional influences</span>
+        </div>
+
+        <div>
+          <strong>100%</strong>
+          <span>Made with care</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
     <!-- STORY -->
-    <section id="story" class="story">
 
-      <div class="section-label">01 — OUR STORY</div>
+    <section class="story-section" id="story">
 
-      <div class="story-content">
+      <div class="story-image reveal">
+        <img
+          src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1400&q=85"
+          alt="Indian cuisine served at a restaurant"
+          loading="lazy"
+        >
+
+        <div class="image-tag">
+          <span>RANG</span>
+          <span>01 / 03</span>
+        </div>
+      </div>
+
+      <div class="story-copy reveal">
+
+        <p class="section-label">02 — OUR STORY</p>
+
         <h2>
-          Tradition on every
-          <span>plate.</span>
+          Tradition on
+          <span>every plate.</span>
         </h2>
 
         <p>
-          At RANG, we celebrate the rich flavors of India through
-          recipes passed down through generations. From slow-cooked
-          curries to sizzling tandoor dishes, every meal is made
-          with care.
+          At RANG, we celebrate the richness and diversity of Indian
+          cooking without losing sight of the present.
         </p>
+
+        <p>
+          From slow-cooked curries to dishes finished over an open flame,
+          our kitchen brings together recipes inspired by generations of
+          Indian cooks and a distinctly modern approach.
+        </p>
+
+        <a href="#menu" class="text-link">
+          Discover our menu
+          <span>↗</span>
+        </a>
+
       </div>
 
     </section>
+
 
     <!-- MENU -->
-    <section id="menu" class="menu">
 
-      <div class="section-label">02 — SIGNATURE DISHES</div>
+    <section class="menu-section" id="menu">
 
-      <h2>Made for <span>sharing.</span></h2>
+      <div class="menu-heading reveal">
 
-      <div class="menu-grid">
+        <div>
+          <p class="section-label">03 — FROM THE KITCHEN</p>
 
-        <article>
-          <div class="dish-number">01</div>
-          <h3>Butter Chicken</h3>
-          <p>Smoky tandoori chicken · Tomato · Cream · Spices</p>
-          <strong>₹520</strong>
+          <h2>
+            Made for
+            <span>sharing.</span>
+          </h2>
+        </div>
+
+        <p>
+          A few favourites from our kitchen,
+          inspired by India's diverse culinary traditions.
+        </p>
+
+      </div>
+
+
+      <div class="dish-grid">
+
+        <article class="dish-card reveal">
+
+          <div class="dish-image">
+            <img
+              src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=85"
+              alt="Indian butter chicken"
+              loading="lazy"
+            >
+
+            <span class="dish-index">01</span>
+          </div>
+
+          <div class="dish-info">
+            <div>
+              <h3>Butter Chicken</h3>
+              <p>
+                Tandoori chicken · Tomato · Cream · House spices
+              </p>
+            </div>
+
+            <strong>₹520</strong>
+          </div>
+
         </article>
 
-        <article>
-          <div class="dish-number">02</div>
-          <h3>Royal Biryani</h3>
-          <p>Fragrant basmati · Saffron · Slow-cooked spices</p>
-          <strong>₹480</strong>
+
+        <article class="dish-card reveal">
+
+          <div class="dish-image">
+            <img
+              src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=900&q=85"
+              alt="Indian biryani"
+              loading="lazy"
+            >
+
+            <span class="dish-index">02</span>
+          </div>
+
+          <div class="dish-info">
+            <div>
+              <h3>Royal Biryani</h3>
+              <p>
+                Fragrant basmati · Saffron · Slow-cooked spices
+              </p>
+            </div>
+
+            <strong>₹480</strong>
+          </div>
+
         </article>
 
-        <article>
-          <div class="dish-number">03</div>
-          <h3>Paneer Tikka</h3>
-          <p>Charred paneer · Peppers · House masala</p>
-          <strong>₹390</strong>
+
+        <article class="dish-card reveal">
+
+          <div class="dish-image">
+            <img
+              src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=900&q=85"
+              alt="Paneer tikka"
+              loading="lazy"
+            >
+
+            <span class="dish-index">03</span>
+          </div>
+
+          <div class="dish-info">
+            <div>
+              <h3>Paneer Tikka</h3>
+              <p>
+                Charred paneer · Peppers · House masala
+              </p>
+            </div>
+
+            <strong>₹390</strong>
+          </div>
+
         </article>
+
+      </div>
+
+
+      <div class="menu-footer reveal">
+
+        <p>
+          Our menu changes with the season.
+        </p>
+
+        <a href="#contact" class="text-link">
+          View full menu
+          <span>↗</span>
+        </a>
 
       </div>
 
     </section>
 
+
+    <!-- EXPERIENCE -->
+
+    <section class="experience-section" id="experience">
+
+      <div class="experience-background"></div>
+
+      <div class="experience-content">
+
+        <p class="section-label reveal">
+          04 — THE EXPERIENCE
+        </p>
+
+        <h2 class="reveal">
+          More than
+          <span>a meal.</span>
+        </h2>
+
+        <p class="experience-description reveal">
+          Come for the food. Stay for the stories, the people
+          and the feeling of being at home.
+        </p>
+
+        <div class="experience-details reveal">
+
+          <div>
+            <span>01</span>
+            <strong>Warm hospitality</strong>
+            <p>
+              Thoughtful service from the moment you arrive.
+            </p>
+          </div>
+
+          <div>
+            <span>02</span>
+            <strong>Bold flavours</strong>
+            <p>
+              Familiar Indian flavours with a modern expression.
+            </p>
+          </div>
+
+          <div>
+            <span>03</span>
+            <strong>Shared moments</strong>
+            <p>
+              A table designed for conversations and celebrations.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
     <!-- RESERVATION -->
-    <section id="contact" class="contact">
 
-      <p class="section-label">03 — RESERVATIONS</p>
+    <section class="contact-section" id="contact">
 
-      <h2>
-        Come hungry.
-        <span>Leave happy.</span>
-      </h2>
+      <div class="contact-inner reveal">
 
-      <p>Join us for an unforgettable Indian dining experience.</p>
+        <p class="section-label">05 — RESERVATIONS</p>
 
-      <a href="mailto:hello@rangrestaurant.example" class="button">
-        Book Your Table ↗
-      </a>
+        <h2>
+          Come hungry.
+          <span>Leave happy.</span>
+        </h2>
+
+        <p>
+          Join us for an unforgettable Indian dining experience.
+          Your table is waiting.
+        </p>
+
+        <a
+          href="mailto:hello@rangrestaurant.example"
+          class="primary-button"
+        >
+          <span>Book your table</span>
+          <span>↗</span>
+        </a>
+
+      </div>
 
     </section>
 
   </main>
 
+
+  <!-- FOOTER -->
+
   <footer>
-    <strong>RANG</strong>
-    <p>© 2026 RANG — Concept Website by Kritarth.</p>
+
+    <div class="footer-brand">
+      <a href="#" class="logo">
+        RANG<span>.</span>
+      </a>
+
+      <p>
+        Modern Indian kitchen.<br>
+        Concept website by Kritarth.
+      </p>
+    </div>
+
+    <div class="footer-right">
+
+      <div class="footer-links">
+        <a href="#story">Story</a>
+        <a href="#menu">Menu</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <p>© 2026 RANG</p>
+
+    </div>
+
   </footer>
+
 
   <script src="script.js"></script>
 
