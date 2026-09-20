@@ -33,46 +33,36 @@
   box-sizing: border-box;
 }
 
-
 html {
   scroll-behavior: smooth;
   background: var(--black);
 }
 
-
 body {
   background: var(--black);
   color: var(--white);
-
   font-family: var(--body);
-
   line-height: 1.6;
-
   overflow-x: hidden;
 }
-
 
 body.menu-open {
   overflow: hidden;
 }
-
 
 a {
   color: inherit;
   text-decoration: none;
 }
 
-
 img {
   display: block;
   width: 100%;
 }
 
-
 button {
   font: inherit;
 }
-
 
 #training,
 #facilities,
@@ -89,12 +79,9 @@ button {
 
 .site-header {
   position: fixed;
-
   top: 0;
   left: 0;
-
   width: 100%;
-
   z-index: 100;
 
   transition:
@@ -103,27 +90,19 @@ button {
     backdrop-filter .35s ease;
 }
 
-
 .site-header.scrolled {
   background: rgba(8, 9, 9, .82);
-
   backdrop-filter: blur(18px);
-
   border-bottom: 1px solid var(--line);
 }
 
-
 .nav {
   width: min(1250px, calc(100% - 50px));
-
   height: 82px;
-
   margin: auto;
 
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 }
 
@@ -134,16 +113,11 @@ button {
 
 .logo {
   font-family: var(--display);
-
   font-size: 35px;
-
   font-weight: 900;
-
   line-height: 1;
-
   letter-spacing: -1px;
 }
-
 
 .logo span {
   color: var(--lime);
@@ -156,33 +130,25 @@ button {
 
 .nav-links {
   display: flex;
-
   gap: 32px;
 
   color: #c6c8c3;
-
   font-size: 11px;
-
   font-weight: 500;
 
   text-transform: uppercase;
-
   letter-spacing: 1px;
 }
 
-
 .nav-links a {
   position: relative;
-
   transition: color .25s ease;
 }
-
 
 .nav-links a::after {
   content: "";
 
   position: absolute;
-
   left: 0;
   bottom: -7px;
 
@@ -194,11 +160,9 @@ button {
   transition: width .3s ease;
 }
 
-
 .nav-links a:hover {
   color: white;
 }
-
 
 .nav-links a:hover::after {
   width: 100%;
@@ -211,23 +175,18 @@ button {
 
 .nav-button {
   display: flex;
-
   align-items: center;
-
   gap: 10px;
 
   padding: 11px 18px;
 
   background: var(--lime);
-
   color: var(--black);
 
   font-size: 10px;
-
   font-weight: 800;
 
   text-transform: uppercase;
-
   letter-spacing: .8px;
 
   transition:
@@ -235,15 +194,12 @@ button {
     background .25s ease;
 }
 
-
 .nav-button span {
   font-size: 15px;
 }
 
-
 .nav-button:hover {
   background: var(--lime-soft);
-
   transform: translateY(-2px);
 }
 
@@ -259,24 +215,18 @@ button {
   height: 42px;
 
   align-items: center;
-
   justify-content: center;
-
   flex-direction: column;
-
   gap: 6px;
 
   background: transparent;
-
   border: 1px solid var(--line);
 
   cursor: pointer;
 }
 
-
 .menu-toggle span {
   width: 18px;
-
   height: 2px;
 
   background: var(--white);
@@ -286,11 +236,9 @@ button {
     opacity .3s ease;
 }
 
-
 .menu-toggle.active span:first-child {
   transform: translateY(4px) rotate(45deg);
 }
-
 
 .menu-toggle.active span:last-child {
   transform: translateY(-4px) rotate(-45deg);
@@ -314,54 +262,41 @@ button {
   color: var(--lime);
 
   font-size: 10px;
-
   font-weight: 700;
 
   text-transform: uppercase;
-
   letter-spacing: 2px;
 }
-
 
 h2 {
   font-family: var(--display);
 
   font-size: clamp(65px, 8vw, 115px);
-
   font-weight: 800;
-
   line-height: .82;
 
   text-transform: uppercase;
-
   letter-spacing: -2px;
 }
-
 
 h2 span {
   color: var(--lime);
 }
 
-
 .primary-button {
   display: inline-flex;
-
   align-items: center;
-
   gap: 35px;
 
   padding: 16px 20px;
 
   background: var(--lime);
-
   color: var(--black);
 
   font-size: 10px;
-
   font-weight: 800;
 
   text-transform: uppercase;
-
   letter-spacing: 1px;
 
   transition:
@@ -369,20 +304,15 @@ h2 span {
     background .3s ease;
 }
 
-
 .primary-button span:last-child {
   font-size: 17px;
-
   transition: transform .3s ease;
 }
 
-
 .primary-button:hover {
   background: var(--lime-soft);
-
   transform: translateY(-3px);
 }
-
 
 .primary-button:hover span:last-child {
   transform: translate(4px, -4px);
@@ -399,16 +329,13 @@ h2 span {
   min-height: 100svh;
 
   display: flex;
-
   align-items: center;
 
   overflow: hidden;
 }
 
-
 .hero-image {
   position: absolute;
-
   inset: 0;
 
   background:
@@ -420,9 +347,7 @@ h2 span {
   animation: heroZoom 12s ease-out forwards;
 }
 
-
 @keyframes heroZoom {
-
   from {
     transform: scale(1.1);
   }
@@ -430,13 +355,10 @@ h2 span {
   to {
     transform: scale(1.05);
   }
-
 }
-
 
 .hero-overlay {
   position: absolute;
-
   inset: 0;
 
   background:
@@ -448,42 +370,31 @@ h2 span {
     );
 }
 
-
 .hero-content {
   position: relative;
-
   z-index: 2;
 
   width: min(1250px, calc(100% - 50px));
-
   min-height: 100svh;
 
   margin: auto;
-
   padding: 125px 0 45px;
 
   display: flex;
-
   flex-direction: column;
-
   justify-content: space-between;
 }
 
-
 .hero-top {
   display: flex;
-
   justify-content: space-between;
 
   color: #c8cac4;
 
   font-size: 9px;
-
   font-weight: 600;
-
   letter-spacing: 2px;
 }
-
 
 .hero-kicker {
   margin-bottom: 15px;
@@ -491,17 +402,13 @@ h2 span {
   color: var(--lime);
 
   font-size: 11px;
-
   font-weight: 700;
-
   letter-spacing: 2px;
 }
-
 
 .hero-main {
   max-width: 900px;
 }
-
 
 .hero h1 {
   max-width: 800px;
@@ -509,23 +416,17 @@ h2 span {
   font-family: var(--display);
 
   font-size: clamp(100px, 15vw, 205px);
-
   font-weight: 900;
-
   line-height: .72;
 
   letter-spacing: -4px;
-
   text-transform: uppercase;
 }
 
-
 .hero h1 span {
   display: block;
-
   color: var(--lime);
 }
-
 
 .hero-description {
   max-width: 470px;
@@ -535,29 +436,21 @@ h2 span {
   color: #d0d2cc;
 
   font-size: 14px;
-
   line-height: 1.8;
 }
 
-
 .hero-actions {
   display: flex;
-
   align-items: center;
-
   gap: 25px;
 }
 
-
 .secondary-button {
   display: inline-flex;
-
   align-items: center;
-
   gap: 10px;
 
   margin-top: 34px;
-
   padding: 15px 0;
 
   border-bottom: 1px solid rgba(244, 244, 239, .35);
@@ -565,21 +458,16 @@ h2 span {
   color: var(--white);
 
   font-size: 10px;
-
   font-weight: 700;
 
   text-transform: uppercase;
-
   letter-spacing: 1px;
 }
 
-
 .secondary-button span {
   color: var(--lime);
-
   transition: transform .25s ease;
 }
-
 
 .secondary-button:hover span {
   transform: translateY(3px);
@@ -592,7 +480,6 @@ h2 span {
 
 .hero-bottom {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
 
   max-width: 650px;
@@ -602,32 +489,24 @@ h2 span {
   padding-top: 20px;
 }
 
-
 .hero-bottom div {
   display: flex;
-
   flex-direction: column;
-
   gap: 2px;
 }
-
 
 .hero-bottom strong {
   font-family: var(--display);
 
   font-size: 34px;
-
   font-weight: 700;
-
   line-height: 1;
 }
-
 
 .hero-bottom span {
   color: #9c9f99;
 
   font-size: 8px;
-
   letter-spacing: 1.5px;
 }
 
@@ -640,37 +519,29 @@ h2 span {
   width: min(1150px, calc(100% - 50px));
 
   margin: auto;
-
   padding: 160px 0 130px;
 
   display: grid;
-
   grid-template-columns: 100px 1fr;
 
   gap: 30px;
 }
 
-
 .intro-number {
   color: var(--lime);
 
   font-size: 11px;
-
   font-weight: 700;
-
   letter-spacing: 2px;
 }
-
 
 .intro-content {
   max-width: 850px;
 }
 
-
 .intro-content h2 {
   margin-top: 20px;
 }
-
 
 .intro-text {
   max-width: 650px;
@@ -680,7 +551,6 @@ h2 span {
   color: var(--muted);
 
   font-size: 16px;
-
   line-height: 1.9;
 }
 
@@ -691,27 +561,22 @@ h2 span {
 
 .section-heading {
   display: grid;
-
   grid-template-columns: 1fr 330px;
 
   align-items: end;
 
   gap: 70px;
-
   margin-bottom: 65px;
 }
-
 
 .section-heading h2 {
   margin-top: 18px;
 }
 
-
 .section-heading > p {
   color: var(--muted);
 
   font-size: 13px;
-
   line-height: 1.8;
 }
 
@@ -724,42 +589,40 @@ h2 span {
   width: min(1250px, calc(100% - 50px));
 
   margin: auto;
-
   padding: 80px 0 150px;
 }
 
 
+/*
+   IMPORTANT:
+   All 3 training cards are equal width now.
+*/
+
 .training-grid {
   display: grid;
 
-  grid-template-columns: 1.35fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
   gap: 18px;
 }
-
 
 .training-card {
   min-width: 0;
 }
 
-
-.training-image {
+.training-image,
+.training-card.large .training-image {
   position: relative;
 
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4 / 3;
 
   overflow: hidden;
 
   background: var(--black-soft);
 }
 
-
-.training-card.large .training-image {
-  aspect-ratio: 4 / 4.8;
-}
-
-
 .training-image img {
+  width: 100%;
   height: 100%;
 
   object-fit: cover;
@@ -771,13 +634,10 @@ h2 span {
     filter .5s ease;
 }
 
-
 .training-card:hover .training-image img {
   transform: scale(1.06);
-
   filter: grayscale(0%);
 }
-
 
 .training-info {
   display: grid;
@@ -791,28 +651,22 @@ h2 span {
   border-bottom: 1px solid var(--line);
 }
 
-
 .training-info > span {
   color: var(--lime);
 
   font-size: 9px;
-
   font-weight: 700;
 }
-
 
 .training-info h3 {
   font-family: var(--display);
 
   font-size: 32px;
-
   font-weight: 700;
-
   line-height: 1;
 
   text-transform: uppercase;
 }
-
 
 .training-info p {
   margin-top: 9px;
@@ -820,10 +674,8 @@ h2 span {
   color: var(--muted);
 
   font-size: 10px;
-
   line-height: 1.7;
 }
-
 
 .training-info .arrow {
   color: var(--white);
@@ -834,7 +686,6 @@ h2 span {
     color .25s ease,
     transform .25s ease;
 }
-
 
 .training-card:hover .arrow {
   color: var(--lime);
@@ -853,16 +704,12 @@ h2 span {
   padding: 25px 0;
 
   background: var(--lime);
-
   color: var(--black);
 }
 
-
 .marquee {
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   gap: 35px;
@@ -872,20 +719,16 @@ h2 span {
   font-family: var(--display);
 
   font-size: clamp(35px, 5vw, 65px);
-
   font-weight: 800;
-
   line-height: 1;
 
   text-transform: uppercase;
 }
 
-
 .marquee i {
   font-family: Arial, sans-serif;
 
   font-size: 18px;
-
   font-style: normal;
 }
 
@@ -898,18 +741,15 @@ h2 span {
   width: min(1250px, calc(100% - 50px));
 
   margin: auto;
-
   padding: 150px 0;
 
   display: grid;
-
   grid-template-columns: 1.15fr .85fr;
 
   gap: 90px;
 
   align-items: center;
 }
-
 
 .facilities-image {
   position: relative;
@@ -918,7 +758,6 @@ h2 span {
 
   overflow: hidden;
 }
-
 
 .facilities-image img {
   height: 100%;
@@ -932,13 +771,11 @@ h2 span {
     filter .6s ease;
 }
 
-
 .facilities-image:hover img {
   transform: scale(1.04);
 
   filter: grayscale(10%);
 }
-
 
 .image-label {
   position: absolute;
@@ -948,7 +785,6 @@ h2 span {
   bottom: 18px;
 
   display: flex;
-
   justify-content: space-between;
 
   padding: 12px 14px;
@@ -960,22 +796,17 @@ h2 span {
   border: 1px solid rgba(244, 244, 239, .15);
 
   font-size: 8px;
-
   font-weight: 600;
-
   letter-spacing: 1.5px;
 }
-
 
 .image-label span:last-child {
   color: var(--lime);
 }
 
-
 .facilities-content h2 {
   margin-top: 18px;
 }
-
 
 .facilities-content > p:not(.section-label) {
   max-width: 450px;
@@ -985,7 +816,6 @@ h2 span {
   color: var(--muted);
 
   font-size: 13px;
-
   line-height: 1.8;
 }
 
@@ -1000,7 +830,6 @@ h2 span {
   border-top: 1px solid var(--line);
 }
 
-
 .facility-list div {
   display: grid;
 
@@ -1011,21 +840,17 @@ h2 span {
   border-bottom: 1px solid var(--line);
 }
 
-
 .facility-list span {
   color: var(--lime);
 
   font-size: 9px;
-
   font-weight: 700;
 }
-
 
 .facility-list strong {
   font-family: var(--display);
 
   font-size: 23px;
-
   font-weight: 600;
 
   text-transform: uppercase;
@@ -1040,10 +865,8 @@ h2 span {
   width: min(1250px, calc(100% - 50px));
 
   margin: auto;
-
   padding: 60px 0 150px;
 }
-
 
 .trainers-grid {
   display: grid;
@@ -1053,7 +876,6 @@ h2 span {
   gap: 20px;
 }
 
-
 .trainer-image {
   position: relative;
 
@@ -1061,7 +883,6 @@ h2 span {
 
   overflow: hidden;
 }
-
 
 .trainer-image img {
   height: 100%;
@@ -1075,13 +896,11 @@ h2 span {
     filter .5s ease;
 }
 
-
 .trainer-card:hover .trainer-image img {
   transform: scale(1.05);
 
   filter: grayscale(0%);
 }
-
 
 .trainer-image > span {
   position: absolute;
@@ -1093,26 +912,20 @@ h2 span {
   height: 32px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   background: var(--lime);
-
   color: var(--black);
 
   font-size: 9px;
-
   font-weight: 800;
 }
-
 
 .trainer-info {
   display: flex;
 
   justify-content: space-between;
-
   align-items: center;
 
   padding: 20px 0;
@@ -1120,17 +933,14 @@ h2 span {
   border-bottom: 1px solid var(--line);
 }
 
-
 .trainer-info h3 {
   font-family: var(--display);
 
   font-size: 27px;
-
   font-weight: 700;
 
   text-transform: uppercase;
 }
-
 
 .trainer-info p {
   color: var(--muted);
@@ -1138,17 +948,14 @@ h2 span {
   font-size: 9px;
 
   text-transform: uppercase;
-
   letter-spacing: 1px;
 }
-
 
 .trainer-info > span {
   color: var(--lime);
 
   transition: transform .25s ease;
 }
-
 
 .trainer-card:hover .trainer-info > span {
   transform: translate(3px, -3px);
@@ -1163,10 +970,8 @@ h2 span {
   background: var(--black-soft);
 
   border-top: 1px solid var(--line);
-
   border-bottom: 1px solid var(--line);
 }
-
 
 .membership-inner {
   width: min(1250px, calc(100% - 50px));
@@ -1176,16 +981,13 @@ h2 span {
   padding: 150px 0;
 }
 
-
 .membership-heading {
   max-width: 850px;
 }
 
-
 .membership-heading h2 {
   margin-top: 20px;
 }
-
 
 .membership-heading > p:last-child {
   max-width: 450px;
@@ -1212,7 +1014,6 @@ h2 span {
   margin-top: 70px;
 }
 
-
 .plan {
   position: relative;
 
@@ -1227,18 +1028,15 @@ h2 span {
     border-color .3s ease;
 }
 
-
 .plan:hover {
   transform: translateY(-5px);
 
   border-color: rgba(200, 255, 50, .45);
 }
 
-
 .plan.featured {
   border-color: var(--lime);
 }
-
 
 .plan-badge {
   position: absolute;
@@ -1249,16 +1047,12 @@ h2 span {
   padding: 7px 10px;
 
   background: var(--lime);
-
   color: var(--black);
 
   font-size: 7px;
-
   font-weight: 800;
-
   letter-spacing: 1px;
 }
-
 
 .plan-top {
   display: flex;
@@ -1268,12 +1062,9 @@ h2 span {
   color: var(--lime);
 
   font-size: 8px;
-
   font-weight: 700;
-
   letter-spacing: 1.5px;
 }
-
 
 .plan h3 {
   margin-top: 45px;
@@ -1281,14 +1072,11 @@ h2 span {
   font-family: var(--display);
 
   font-size: 40px;
-
   font-weight: 700;
-
   line-height: 1;
 
   text-transform: uppercase;
 }
-
 
 .price {
   display: flex;
@@ -1300,7 +1088,6 @@ h2 span {
   margin-top: 25px;
 }
 
-
 .price strong {
   font-family: var(--display);
 
@@ -1309,13 +1096,11 @@ h2 span {
   line-height: 1;
 }
 
-
 .price span {
   color: var(--muted);
 
   font-size: 9px;
 }
-
 
 .plan ul {
   margin: 35px 0;
@@ -1324,7 +1109,6 @@ h2 span {
 
   list-style: none;
 }
-
 
 .plan li {
   padding: 11px 0;
@@ -1336,7 +1120,6 @@ h2 span {
   font-size: 10px;
 }
 
-
 .plan li::before {
   content: "＋";
 
@@ -1345,12 +1128,10 @@ h2 span {
   color: var(--lime);
 }
 
-
 .plan-button {
   display: flex;
 
   justify-content: space-between;
-
   align-items: center;
 
   padding: 13px 15px;
@@ -1358,11 +1139,9 @@ h2 span {
   border: 1px solid var(--line);
 
   font-size: 9px;
-
   font-weight: 700;
 
   text-transform: uppercase;
-
   letter-spacing: 1px;
 
   transition:
@@ -1370,18 +1149,15 @@ h2 span {
     color .25s ease;
 }
 
-
 .plan-button span {
   color: var(--lime);
 }
-
 
 .plan-button:hover {
   background: var(--lime);
 
   color: var(--black);
 }
-
 
 .plan-button:hover span {
   color: var(--black);
@@ -1402,7 +1178,6 @@ h2 span {
   text-align: center;
 }
 
-
 .quote-mark {
   color: var(--lime);
 
@@ -1412,7 +1187,6 @@ h2 span {
 
   line-height: .5;
 }
-
 
 blockquote {
   margin-top: 25px;
@@ -1430,11 +1204,9 @@ blockquote {
   letter-spacing: -2px;
 }
 
-
 blockquote span {
   color: var(--lime);
 }
-
 
 .quote-section > p {
   margin-top: 35px;
@@ -1442,7 +1214,6 @@ blockquote span {
   color: var(--muted);
 
   font-size: 9px;
-
   font-weight: 700;
 
   letter-spacing: 2px;
@@ -1465,7 +1236,6 @@ blockquote span {
   overflow: hidden;
 }
 
-
 .join-background {
   position: absolute;
 
@@ -1478,11 +1248,9 @@ blockquote span {
   transition: transform 1s ease;
 }
 
-
 .join-section:hover .join-background {
   transform: scale(1.03);
 }
-
 
 .join-overlay {
   position: absolute;
@@ -1497,7 +1265,6 @@ blockquote span {
     );
 }
 
-
 .join-content {
   position: relative;
 
@@ -1508,13 +1275,11 @@ blockquote span {
   margin: auto;
 }
 
-
 .join-content h2 {
   max-width: 800px;
 
   margin-top: 20px;
 }
-
 
 .join-content > p:not(.section-label) {
   margin-top: 30px;
@@ -1545,7 +1310,6 @@ footer {
   border-top: 1px solid var(--line);
 }
 
-
 .footer-brand p {
   margin-top: 15px;
 
@@ -1556,7 +1320,6 @@ footer {
   line-height: 1.7;
 }
 
-
 .footer-center {
   display: flex;
 
@@ -1565,24 +1328,19 @@ footer {
   gap: 25px;
 }
 
-
 .footer-center a {
   color: var(--muted);
 
   font-size: 9px;
-
   font-weight: 600;
 
   text-transform: uppercase;
-
   letter-spacing: 1px;
 }
-
 
 .footer-center a:hover {
   color: var(--lime);
 }
-
 
 .footer-right {
   display: flex;
@@ -1613,7 +1371,6 @@ footer {
     transform .8s cubic-bezier(.2, .7, .2, 1);
 }
 
-
 .reveal.visible {
   opacity: 1;
 
@@ -1631,19 +1388,17 @@ footer {
     width: calc(100% - 40px);
   }
 
-
   .nav-links,
   .nav-button {
     display: none;
   }
-
 
   .menu-toggle {
     display: flex;
   }
 
 
-  /* Mobile/tablet menu */
+  /* Mobile / tablet menu */
 
   .mobile-menu {
     position: fixed;
@@ -1667,9 +1422,7 @@ footer {
     backdrop-filter: blur(18px);
 
     visibility: hidden;
-
     opacity: 0;
-
     pointer-events: none;
 
     transform: translateY(-20px);
@@ -1682,7 +1435,6 @@ footer {
     z-index: 90;
   }
 
-
   .mobile-menu.open {
     visibility: visible;
 
@@ -1693,30 +1445,24 @@ footer {
     transform: translateY(0);
   }
 
-
   .mobile-menu a {
     font-family: var(--display);
 
     font-size: 45px;
-
     font-weight: 700;
-
     line-height: 1;
 
     text-transform: uppercase;
   }
 
-
   .mobile-menu a:hover {
     color: var(--lime);
   }
-
 
   .mobile-join {
     display: flex;
 
     align-items: center;
-
     justify-content: space-between;
 
     max-width: 300px;
@@ -1732,7 +1478,6 @@ footer {
     font-family: var(--body) !important;
 
     font-size: 11px !important;
-
     font-weight: 800 !important;
 
     letter-spacing: 1px;
@@ -1768,7 +1513,6 @@ footer {
     padding-top: 110px;
   }
 
-
   .hero-overlay {
     background:
       linear-gradient(
@@ -1777,7 +1521,6 @@ footer {
         rgba(8, 9, 9, .48)
       );
   }
-
 
   .hero h1 {
     font-size: clamp(100px, 17vw, 160px);
@@ -1805,22 +1548,16 @@ footer {
   /* Training */
 
   .training-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
 
   .training-card.large {
-    grid-column: span 2;
+    grid-column: auto;
   }
 
-
-  .training-card.large .training-image {
-    aspect-ratio: 16 / 8;
-  }
-
-
+  .training-card.large .training-image,
   .training-image {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 4 / 3;
   }
 
 
@@ -1831,7 +1568,6 @@ footer {
 
     gap: 60px;
   }
-
 
   .facilities-content {
     max-width: 650px;
@@ -1851,9 +1587,9 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 
-
   .plan.featured {
     grid-column: span 2;
+
     order: -1;
   }
 
@@ -1866,20 +1602,17 @@ footer {
     gap: 35px;
   }
 
-
   .footer-center {
     justify-content: flex-start;
 
     flex-wrap: wrap;
   }
 
-
   .footer-right {
     justify-content: space-between;
 
     text-align: left;
   }
-
 }
 
 
@@ -1895,13 +1628,11 @@ footer {
     height: 70px;
   }
 
-
   .mobile-menu {
     top: 70px;
 
     padding: 40px 22px;
   }
-
 
   .mobile-menu a {
     font-size: 39px;
@@ -1923,32 +1654,26 @@ footer {
     min-height: 92svh;
   }
 
-
   .hero-content {
     width: calc(100% - 36px);
 
     min-height: 92svh;
 
     padding-top: 105px;
-
     padding-bottom: 35px;
   }
-
 
   .hero-top {
     font-size: 8px;
   }
 
-
   .hero-top p:last-child {
     display: none;
   }
 
-
   .hero-kicker {
     font-size: 9px;
   }
-
 
   .hero h1 {
     font-size: clamp(85px, 23vw, 125px);
@@ -1956,13 +1681,11 @@ footer {
     letter-spacing: -2px;
   }
 
-
   .hero-description {
     max-width: 340px;
 
     font-size: 12px;
   }
-
 
   .hero-actions {
     flex-wrap: wrap;
@@ -1970,18 +1693,15 @@ footer {
     gap: 0 20px;
   }
 
-
   .hero-bottom {
     grid-template-columns: repeat(3, 1fr);
 
     gap: 15px;
   }
 
-
   .hero-bottom strong {
     font-size: 28px;
   }
-
 
   .hero-bottom span {
     font-size: 7px;
@@ -2003,7 +1723,6 @@ footer {
     padding: 110px 0 90px;
   }
 
-
   .intro-text {
     font-size: 14px;
   }
@@ -2018,7 +1737,6 @@ footer {
     padding: 70px 0 100px;
   }
 
-
   .section-heading {
     margin-bottom: 45px;
   }
@@ -2030,17 +1748,14 @@ footer {
     grid-template-columns: 1fr;
   }
 
-
   .training-card.large {
     grid-column: auto;
   }
-
 
   .training-card.large .training-image,
   .training-image {
     aspect-ratio: 16 / 10;
   }
-
 
   .training-info h3 {
     font-size: 28px;
@@ -2066,16 +1781,13 @@ footer {
     padding: 90px 0;
   }
 
-
   .facilities-image {
     aspect-ratio: 4 / 3;
   }
 
-
   .facility-list {
     margin-top: 40px;
   }
-
 
   .facility-list strong {
     font-size: 21px;
@@ -2087,7 +1799,6 @@ footer {
   .trainers-grid {
     grid-template-columns: 1fr;
   }
-
 
   .trainer-image {
     aspect-ratio: 4 / 5;
@@ -2102,18 +1813,15 @@ footer {
     padding: 100px 0;
   }
 
-
   .plans {
     grid-template-columns: 1fr;
 
     margin-top: 50px;
   }
 
-
   .plan.featured {
     grid-column: auto;
   }
-
 
   .plan {
     padding: 25px;
@@ -2128,7 +1836,6 @@ footer {
     padding: 120px 0;
   }
 
-
   blockquote {
     font-size: clamp(55px, 17vw, 80px);
   }
@@ -2140,18 +1847,15 @@ footer {
     min-height: 600px;
   }
 
-
   .join-content {
     width: calc(100% - 36px);
   }
-
 
   .join-background {
     background:
       url("https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1400&q=85")
       center / cover no-repeat;
   }
-
 
   .join-overlay {
     background:
@@ -2170,18 +1874,15 @@ footer {
     padding: 40px 0;
   }
 
-
   .footer-center {
     gap: 18px;
   }
-
 
   .footer-right {
     flex-direction: column;
 
     gap: 15px;
   }
-
 }
 
 
@@ -2195,7 +1896,6 @@ footer {
     scroll-behavior: auto;
   }
 
-
   *,
   *::before,
   *::after {
@@ -2206,11 +1906,9 @@ footer {
     transition-duration: .01ms !important;
   }
 
-
   .reveal {
     opacity: 1;
 
     transform: none;
   }
-
 }
