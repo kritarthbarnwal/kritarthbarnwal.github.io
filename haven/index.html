@@ -2,182 +2,1387 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>HAVEN — Private Residences</title>
-  <meta name="description" content="HAVEN — Exceptional homes for exceptional living.">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Elara Dental Studio — Modern Dentistry. Personal Care.</title>
+
+  <meta
+    name="description"
+    content="Elara Dental Studio is a premium dental clinic website concept focused on modern dentistry, comfortable care and easy appointment booking."
+  >
+
+  <meta name="theme-color" content="#17352f">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <header>
-    <nav>
-      <a href="#" class="logo">HAVEN</a>
+  <!-- =========================
+       HEADER
+  ========================== -->
 
-      <div class="links">
-        <a href="#properties">Properties</a>
+  <header class="site-header" id="siteHeader">
+
+    <div class="container nav-container">
+
+      <a href="#home" class="logo">
+        <span class="logo-mark">E</span>
+
+        <span class="logo-text">
+          <strong>ELARA</strong>
+          <small>DENTAL STUDIO</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+
         <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#doctor">Doctor</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
-      </div>
 
-      <a href="#contact" class="inquire">Inquire</a>
-    </nav>
+        <a
+          href="#appointment"
+          class="nav-button"
+        >
+          Book Appointment
+        </a>
+
+      </nav>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
   </header>
+
 
   <main>
 
-    <!-- HERO -->
-    <section class="hero">
+    <!-- =========================
+         HERO
+    ========================== -->
 
-      <div class="hero-image"></div>
-      <div class="overlay"></div>
+    <section class="hero" id="home">
 
-      <div class="hero-content">
-        <p class="eyebrow">PRIVATE RESIDENCES · 2026</p>
+      <div class="hero-bg"></div>
 
-        <h1>
-          Find your
-          <span>place.</span>
-        </h1>
+      <div class="container hero-grid">
 
-        <p>
-          A curated collection of exceptional residences
-          designed for modern living.
-        </p>
+        <div class="hero-content reveal">
 
-        <a href="#properties" class="button">
-          Explore Residences ↗
-        </a>
+          <div class="eyebrow">
+            <span></span>
+            MODERN DENTISTRY
+          </div>
+
+          <h1>
+            Your smile,
+            <em>beautifully cared for.</em>
+          </h1>
+
+          <p class="hero-description">
+            Thoughtful dental care in a calm, modern environment.
+            From everyday checkups to advanced treatments,
+            every visit is designed around your comfort.
+          </p>
+
+          <div class="hero-actions">
+
+            <a
+              href="#appointment"
+              class="button button-primary"
+            >
+              Book an Appointment
+              <span>↗</span>
+            </a>
+
+            <a
+              href="#services"
+              class="button button-secondary"
+            >
+              Explore Services
+            </a>
+
+          </div>
+
+          <div class="hero-trust">
+
+            <div class="trust-item">
+              <strong>10+</strong>
+              <span>Years of care</span>
+            </div>
+
+            <div class="trust-divider"></div>
+
+            <div class="trust-item">
+              <strong>4.9/5</strong>
+              <span>Patient rating</span>
+            </div>
+
+            <div class="trust-divider"></div>
+
+            <div class="trust-item">
+              <strong>7k+</strong>
+              <span>Smiles cared for</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-visual reveal">
+
+          <div class="hero-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1200&q=85"
+              alt="Modern dental clinic interior"
+            >
+
+          </div>
+
+          <div class="hero-card">
+
+            <span class="card-icon">✦</span>
+
+            <div>
+              <strong>Gentle care.</strong>
+              <p>Every appointment, thoughtfully.</p>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="location">
-        <span>01</span>
-        <p>New Delhi · India</p>
+      <div class="hero-scroll">
+        <span>Scroll to explore</span>
+        <span class="scroll-line"></span>
       </div>
 
     </section>
 
-    <!-- PROPERTIES -->
-    <section id="properties" class="properties">
 
-      <p class="label">01 — FEATURED RESIDENCES</p>
+    <!-- =========================
+         INTRO
+    ========================== -->
 
-      <h2>
-        Spaces worth
-        <span>coming home to.</span>
-      </h2>
+    <section class="intro section">
 
-      <div class="property-grid">
+      <div class="container intro-grid">
 
-        <article>
-          <div class="property-image one"></div>
+        <div class="section-label reveal">
+          01 / ABOUT ELARA
+        </div>
 
-          <div class="property-info">
-            <div>
-              <h3>The Aria Residence</h3>
-              <p>Gurugram · 4 Bedrooms</p>
-            </div>
+        <div class="intro-content reveal">
 
-            <strong>₹4.8 Cr</strong>
-          </div>
-        </article>
+          <h2>
+            Dentistry that feels
+            <em>different.</em>
+          </h2>
 
-        <article>
-          <div class="property-image two"></div>
+          <p class="large-text">
+            We believe great dentistry isn't only about healthy teeth.
+            It's about creating an experience where you feel informed,
+            comfortable and genuinely cared for.
+          </p>
 
-          <div class="property-info">
-            <div>
-              <h3>Casa Verde</h3>
-              <p>New Delhi · 3 Bedrooms</p>
-            </div>
+          <p>
+            Elara Dental Studio is a fictional clinic concept built
+            around a modern approach to patient care — combining
+            advanced dental techniques with a calm, personal experience.
+          </p>
 
-            <strong>₹3.6 Cr</strong>
-          </div>
-        </article>
+          <a href="#doctor" class="text-link">
+            Meet our doctor
+            <span>→</span>
+          </a>
 
-        <article>
-          <div class="property-image three"></div>
-
-          <div class="property-info">
-            <div>
-              <h3>The Oak House</h3>
-              <p>Noida · 5 Bedrooms</p>
-            </div>
-
-            <strong>₹5.2 Cr</strong>
-          </div>
-        </article>
+        </div>
 
       </div>
 
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="about">
 
-      <p class="label">02 — ABOUT HAVEN</p>
+    <!-- =========================
+         SERVICES
+    ========================== -->
 
-      <div class="about-content">
+    <section class="services section" id="services">
 
-        <h2>
-          More than
-          <span>an address.</span>
-        </h2>
+      <div class="container">
 
-        <p>
-          HAVEN connects discerning buyers with distinctive
-          residences in India's most sought-after neighbourhoods.
-          Every property is selected for its architecture,
-          location and lasting value.
-        </p>
+        <div class="section-heading reveal">
 
-      </div>
+          <div class="section-label">
+            02 / OUR SERVICES
+          </div>
 
-      <div class="stats">
-        <div>
-          <strong>25+</strong>
-          <span>Properties</span>
+          <div>
+
+            <h2>
+              Complete care for
+              <em>every smile.</em>
+            </h2>
+
+            <p>
+              From preventive care to advanced treatments,
+              our services are designed around long-term oral health.
+            </p>
+
+          </div>
+
         </div>
 
-        <div>
-          <strong>8</strong>
-          <span>Cities</span>
+
+        <div class="services-grid">
+
+          <article class="service-card reveal">
+
+            <span class="service-number">01</span>
+
+            <div class="service-icon">✦</div>
+
+            <h3>General Dentistry</h3>
+
+            <p>
+              Routine examinations, cleanings and preventive
+              dental care for a healthier smile.
+            </p>
+
+            <a href="#appointment">Learn more →</a>
+
+          </article>
+
+
+          <article class="service-card reveal">
+
+            <span class="service-number">02</span>
+
+            <div class="service-icon">◌</div>
+
+            <h3>Cosmetic Dentistry</h3>
+
+            <p>
+              Thoughtful treatments designed to improve the
+              appearance and confidence of your smile.
+            </p>
+
+            <a href="#appointment">Learn more →</a>
+
+          </article>
+
+
+          <article class="service-card reveal">
+
+            <span class="service-number">03</span>
+
+            <div class="service-icon">+</div>
+
+            <h3>Dental Implants</h3>
+
+            <p>
+              Modern implant solutions designed to restore
+              function and create a natural-looking result.
+            </p>
+
+            <a href="#appointment">Learn more →</a>
+
+          </article>
+
+
+          <article class="service-card reveal">
+
+            <span class="service-number">04</span>
+
+            <div class="service-icon">⌁</div>
+
+            <h3>Root Canal Treatment</h3>
+
+            <p>
+              Comfortable, carefully planned treatment focused
+              on preserving your natural tooth.
+            </p>
+
+            <a href="#appointment">Learn more →</a>
+
+          </article>
+
+
+          <article class="service-card reveal">
+
+            <span class="service-number">05</span>
+
+            <div class="service-icon">◇</div>
+
+            <h3>Teeth Whitening</h3>
+
+            <p>
+              Professional whitening options for a brighter,
+              refreshed smile.
+            </p>
+
+            <a href="#appointment">Learn more →</a>
+
+          </article>
+
+
+          <article class="service-card reveal">
+
+            <span class="service-number">06</span>
+
+            <div class="service-icon">∞</div>
+
+            <h3>Braces & Aligners</h3>
+
+            <p>
+              Modern orthodontic solutions designed to help
+              improve alignment and function.
+            </p>
+
+            <a href="#appointment">Learn more →</a>
+
+          </article>
+
         </div>
 
-        <div>
-          <strong>12</strong>
-          <span>Years of trust</span>
-        </div>
       </div>
 
     </section>
 
-    <!-- CTA -->
-    <section id="contact" class="contact">
 
-      <p class="label">03 — PRIVATE VIEWINGS</p>
+    <!-- =========================
+         WHY ELARA
+    ========================== -->
 
-      <h2>
-        Your next chapter
-        <span>starts here.</span>
-      </h2>
+    <section class="why section">
 
-      <p>Speak with our property specialists.</p>
+      <div class="container why-grid">
 
-      <a href="mailto:hello@haven.example" class="button">
-        Make an Inquiry ↗
-      </a>
+        <div class="why-image reveal">
+
+          <img
+            src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1000&q=85"
+            alt="Dental care equipment"
+            loading="lazy"
+          >
+
+          <div class="image-badge">
+            <strong>01</strong>
+            <span>Patient-first care</span>
+          </div>
+
+        </div>
+
+
+        <div class="why-content reveal">
+
+          <div class="section-label">
+            03 / WHY ELARA
+          </div>
+
+          <h2>
+            Care designed
+            <em>around you.</em>
+          </h2>
+
+          <p>
+            Your appointment should never feel rushed.
+            We focus on clear communication, thoughtful treatment
+            planning and a comfortable environment.
+          </p>
+
+
+          <div class="feature-list">
+
+            <div class="feature">
+
+              <span class="feature-icon">01</span>
+
+              <div>
+                <h3>Clear communication</h3>
+                <p>
+                  Understand your treatment options before making decisions.
+                </p>
+              </div>
+
+            </div>
+
+
+            <div class="feature">
+
+              <span class="feature-icon">02</span>
+
+              <div>
+                <h3>Modern technology</h3>
+                <p>
+                  Contemporary tools and techniques support precise care.
+                </p>
+              </div>
+
+            </div>
+
+
+            <div class="feature">
+
+              <span class="feature-icon">03</span>
+
+              <div>
+                <h3>Comfort-first experience</h3>
+                <p>
+                  A calm clinic environment designed to make visits easier.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         DOCTOR
+    ========================== -->
+
+    <section class="doctor section" id="doctor">
+
+      <div class="container doctor-grid">
+
+        <div class="doctor-content reveal">
+
+          <div class="section-label">
+            04 / YOUR DENTIST
+          </div>
+
+          <h2>
+            Meet
+            <em>Dr. Aanya Mehta.</em>
+          </h2>
+
+          <p class="doctor-role">
+            BDS · MDS
+          </p>
+
+          <p>
+            Dr. Aanya Mehta is a fictional dentist profile created
+            for this website concept. Her approach combines
+            preventive dentistry with a strong focus on patient
+            education and comfortable care.
+          </p>
+
+          <div class="doctor-details">
+
+            <div>
+              <strong>10+</strong>
+              <span>Years experience</span>
+            </div>
+
+            <div>
+              <strong>7k+</strong>
+              <span>Patients cared for</span>
+            </div>
+
+            <div>
+              <strong>15+</strong>
+              <span>Treatment areas</span>
+            </div>
+
+          </div>
+
+          <a href="#appointment" class="text-link">
+            Book a consultation
+            <span>→</span>
+          </a>
+
+        </div>
+
+
+        <div class="doctor-image reveal">
+
+          <img
+            src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1000&q=85"
+            alt="Professional doctor portrait"
+            loading="lazy"
+          >
+
+          <div class="doctor-caption">
+            <span>Dr. Aanya Mehta</span>
+            <small>Dentist & Oral Care Specialist</small>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROCESS
+    ========================== -->
+
+    <section class="process section">
+
+      <div class="container">
+
+        <div class="section-heading centered reveal">
+
+          <div class="section-label">
+            05 / YOUR VISIT
+          </div>
+
+          <h2>
+            Simple from
+            <em>start to smile.</em>
+          </h2>
+
+          <p>
+            We've designed every step to keep your dental experience clear,
+            comfortable and stress-free.
+          </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+          <div class="process-card reveal">
+
+            <span>01</span>
+
+            <h3>Book</h3>
+
+            <p>
+              Choose a convenient appointment time through our
+              simple booking form.
+            </p>
+
+          </div>
+
+
+          <div class="process-card reveal">
+
+            <span>02</span>
+
+            <h3>Consult</h3>
+
+            <p>
+              Discuss your concerns and receive a clear,
+              personalized assessment.
+            </p>
+
+          </div>
+
+
+          <div class="process-card reveal">
+
+            <span>03</span>
+
+            <h3>Plan</h3>
+
+            <p>
+              Understand your treatment options and decide
+              on the next steps with confidence.
+            </p>
+
+          </div>
+
+
+          <div class="process-card reveal">
+
+            <span>04</span>
+
+            <h3>Care</h3>
+
+            <p>
+              Receive thoughtful treatment with ongoing guidance
+              for your oral health.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CLINIC GALLERY
+    ========================== -->
+
+    <section class="gallery section">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="section-label">
+            06 / THE STUDIO
+          </div>
+
+          <div>
+            <h2>
+              A calmer kind of
+              <em>clinic.</em>
+            </h2>
+
+            <p>
+              A clean, modern environment designed to help you
+              feel comfortable from the moment you arrive.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+          <div class="gallery-item gallery-large reveal">
+
+            <img
+              src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=85"
+              alt="Modern dental treatment room"
+              loading="lazy"
+            >
+
+          </div>
+
+
+          <div class="gallery-item reveal">
+
+            <img
+              src="https://images.unsplash.com/photo-1629909615957-be38d4b5a8e9?auto=format&fit=crop&w=800&q=85"
+              alt="Modern dental clinic interior"
+              loading="lazy"
+            >
+
+          </div>
+
+
+          <div class="gallery-item reveal">
+
+            <img
+              src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=85"
+              alt="Dental consultation room"
+              loading="lazy"
+            >
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         REVIEWS
+    ========================== -->
+
+    <section class="reviews section" id="reviews">
+
+      <div class="container">
+
+        <div class="section-heading centered reveal">
+
+          <div class="section-label">
+            07 / PATIENT STORIES
+          </div>
+
+          <h2>
+            Kind words from
+            <em>our patients.</em>
+          </h2>
+
+          <p>
+            Sample testimonials shown for this website concept.
+          </p>
+
+        </div>
+
+
+        <div class="reviews-grid">
+
+          <article class="review-card reveal">
+
+            <div class="review-stars">
+              ★★★★★
+            </div>
+
+            <blockquote>
+              “The entire experience felt calm and professional.
+              Everything was explained clearly and I never felt rushed.”
+            </blockquote>
+
+            <div class="review-author">
+              <span>R</span>
+
+              <div>
+                <strong>Riya S.</strong>
+                <small>Sample testimonial</small>
+              </div>
+            </div>
+
+          </article>
+
+
+          <article class="review-card review-featured reveal">
+
+            <div class="review-stars">
+              ★★★★★
+            </div>
+
+            <blockquote>
+              “From booking the appointment to the consultation,
+              everything felt incredibly organized and welcoming.”
+            </blockquote>
+
+            <div class="review-author">
+              <span>A</span>
+
+              <div>
+                <strong>Arjun K.</strong>
+                <small>Sample testimonial</small>
+              </div>
+            </div>
+
+          </article>
+
+
+          <article class="review-card reveal">
+
+            <div class="review-stars">
+              ★★★★★
+            </div>
+
+            <blockquote>
+              “A beautifully designed clinic with a very comfortable
+              atmosphere. The staff made the visit easy.”
+            </blockquote>
+
+            <div class="review-author">
+              <span>N</span>
+
+              <div>
+                <strong>Neha P.</strong>
+                <small>Sample testimonial</small>
+              </div>
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         LOCATION
+    ========================== -->
+
+    <section class="location section">
+
+      <div class="container location-grid">
+
+        <div class="location-content reveal">
+
+          <div class="section-label">
+            08 / VISIT US
+          </div>
+
+          <h2>
+            Find us
+            <em>easily.</em>
+          </h2>
+
+          <p>
+            This is a fictional location for the website concept.
+            A real clinic's address and Google Maps location would
+            be added here for the final website.
+          </p>
+
+
+          <div class="location-details">
+
+            <div class="location-detail">
+
+              <span class="detail-icon">⌖</span>
+
+              <div>
+                <strong>Clinic Address</strong>
+                <p>
+                  24 Green Avenue, Gomti Nagar<br>
+                  Lucknow, Uttar Pradesh 226010
+                </p>
+              </div>
+
+            </div>
+
+
+            <div class="location-detail">
+
+              <span class="detail-icon">◷</span>
+
+              <div>
+                <strong>Opening Hours</strong>
+                <p>
+                  Mon – Sat · 9:00 AM – 7:00 PM<br>
+                  Sunday · By appointment
+                </p>
+              </div>
+
+            </div>
+
+
+            <div class="location-detail">
+
+              <span class="detail-icon">☎</span>
+
+              <div>
+                <strong>Call the clinic</strong>
+                <p>
+                  +91 90000 00000
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Gomti+Nagar+Lucknow"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button-primary"
+          >
+            Get Directions
+            <span>↗</span>
+          </a>
+
+        </div>
+
+
+        <div class="map-wrapper reveal">
+
+          <iframe
+            src="https://www.google.com/maps?q=Gomti%20Nagar%20Lucknow&output=embed"
+            title="Elara Dental Studio location map"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+
+          <div class="map-label">
+            <span class="map-pin">●</span>
+            Elara Dental Studio
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         APPOINTMENT
+    ========================== -->
+
+    <section class="appointment section" id="appointment">
+
+      <div class="container appointment-grid">
+
+        <div class="appointment-intro reveal">
+
+          <div class="section-label">
+            09 / APPOINTMENT
+          </div>
+
+          <h2>
+            Ready for a
+            <em>healthier smile?</em>
+          </h2>
+
+          <p>
+            Request an appointment and our fictional clinic team
+            will get back to you with available timings.
+          </p>
+
+
+          <div class="appointment-contact">
+
+            <a href="tel:+919000000000">
+              <span>Call</span>
+              +91 90000 00000
+            </a>
+
+            <a
+              href="https://wa.me/919000000000"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>WhatsApp</span>
+              Chat with the clinic
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <form class="appointment-form reveal" id="appointmentForm">
+
+          <div class="form-row">
+
+            <div class="form-group">
+
+              <label for="name">
+                Full name
+              </label>
+
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="phone">
+                Phone number
+              </label>
+
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+91"
+                required
+              >
+
+            </div>
+
+          </div>
+
+
+          <div class="form-row">
+
+            <div class="form-group">
+
+              <label for="date">
+                Preferred date
+              </label>
+
+              <input
+                type="date"
+                id="date"
+                name="date"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="time">
+                Preferred time
+              </label>
+
+              <select id="time" name="time" required>
+
+                <option value="">
+                  Select time
+                </option>
+
+                <option>9:00 AM – 11:00 AM</option>
+                <option>11:00 AM – 1:00 PM</option>
+                <option>2:00 PM – 4:00 PM</option>
+                <option>4:00 PM – 7:00 PM</option>
+
+              </select>
+
+            </div>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="service">
+              What can we help with?
+            </label>
+
+            <select id="service" name="service" required>
+
+              <option value="">
+                Select a service
+              </option>
+
+              <option>General Dentistry</option>
+              <option>Teeth Cleaning</option>
+              <option>Cosmetic Dentistry</option>
+              <option>Dental Implants</option>
+              <option>Root Canal Treatment</option>
+              <option>Teeth Whitening</option>
+              <option>Braces & Aligners</option>
+              <option>Other</option>
+
+            </select>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="message">
+              Additional message
+            </label>
+
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Tell us anything you'd like us to know..."
+            ></textarea>
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="button button-primary form-submit"
+          >
+            Request Appointment
+            <span>↗</span>
+          </button>
+
+          <p class="form-note">
+            Demo booking form — no real appointment will be created.
+          </p>
+
+          <div
+            class="form-success"
+            id="formSuccess"
+            aria-live="polite"
+          >
+            <strong>Appointment request received.</strong>
+            <span>
+              This is a demo confirmation for the website concept.
+            </span>
+          </div>
+
+        </form>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FAQ
+    ========================== -->
+
+    <section class="faq section" id="faq">
+
+      <div class="container faq-grid">
+
+        <div class="faq-intro reveal">
+
+          <div class="section-label">
+            10 / FAQ
+          </div>
+
+          <h2>
+            Questions,
+            <em>answered.</em>
+          </h2>
+
+          <p>
+            Everything you need to know before your first visit.
+          </p>
+
+        </div>
+
+
+        <div class="faq-list reveal">
+
+          <details class="faq-item">
+            <summary>
+              How do I book an appointment?
+              <span>+</span>
+            </summary>
+
+            <p>
+              Use the appointment form above or contact the clinic
+              directly by phone or WhatsApp.
+            </p>
+          </details>
+
+
+          <details class="faq-item">
+            <summary>
+              What should I bring to my first visit?
+              <span>+</span>
+            </summary>
+
+            <p>
+              Bring any relevant previous dental records,
+              prescriptions or medical information that may
+              help your dentist understand your history.
+            </p>
+          </details>
+
+
+          <details class="faq-item">
+            <summary>
+              Do you treat children?
+              <span>+</span>
+            </summary>
+
+            <p>
+              Pediatric care can be offered depending on the clinic's
+              services and the dentist's qualifications.
+            </p>
+          </details>
+
+
+          <details class="faq-item">
+            <summary>
+              How long does a consultation take?
+              <span>+</span>
+            </summary>
+
+            <p>
+              Appointment length varies depending on the reason
+              for your visit and the assessment required.
+            </p>
+          </details>
+
+
+          <details class="faq-item">
+            <summary>
+              Do you offer emergency appointments?
+              <span>+</span>
+            </summary>
+
+            <p>
+              Emergency availability depends on the clinic schedule.
+              Contact the clinic directly for the latest availability.
+            </p>
+          </details>
+
+
+          <details class="faq-item">
+            <summary>
+              Can I request a specific dentist?
+              <span>+</span>
+            </summary>
+
+            <p>
+              Availability for a specific dentist depends on the
+              clinic's schedule. You can mention your preference
+              when requesting an appointment.
+            </p>
+          </details>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL CTA
+    ========================== -->
+
+    <section class="final-cta section">
+
+      <div class="container">
+
+        <div class="cta-box reveal">
+
+          <div class="cta-decoration">
+            ✦
+          </div>
+
+          <div class="section-label">
+            START YOUR JOURNEY
+          </div>
+
+          <h2>
+            A healthier smile
+            <em>starts here.</em>
+          </h2>
+
+          <p>
+            Take the first step toward better dental care.
+          </p>
+
+          <a
+            href="#appointment"
+            class="button button-light"
+          >
+            Book an Appointment
+            <span>↗</span>
+          </a>
+
+        </div>
+
+      </div>
 
     </section>
 
   </main>
 
-  <footer>
-    <strong>HAVEN</strong>
-    <p>© 2026 HAVEN — Concept Website by Kritarth.</p>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="site-footer" id="contact">
+
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+
+          <a href="#home" class="logo footer-logo">
+
+            <span class="logo-mark">E</span>
+
+            <span class="logo-text">
+              <strong>ELARA</strong>
+              <small>DENTAL STUDIO</small>
+            </span>
+
+          </a>
+
+          <p>
+            Modern dentistry.<br>
+            Personal care.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>Explore</h4>
+
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#doctor">Doctor</a>
+          <a href="#reviews">Reviews</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>Visit</h4>
+
+          <a href="#appointment">Book Appointment</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>Contact</h4>
+
+          <a href="tel:+919000000000">
+            +91 90000 00000
+          </a>
+
+          <a href="mailto:hello@elaradental.example">
+            hello@elaradental.example
+          </a>
+
+          <p>
+            Gomti Nagar,<br>
+            Lucknow, India
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 Elara Dental Studio — Website concept by Kritarth Dev.
+        </span>
+
+        <span>
+          Designed for demonstration purposes.
+        </span>
+
+      </div>
+
+    </div>
+
   </footer>
+
+
+  <!-- Floating mobile appointment button -->
+
+  <a
+    href="#appointment"
+    class="floating-book"
+  >
+    Book Appointment
+    <span>↗</span>
+  </a>
+
 
   <script src="script.js"></script>
 
