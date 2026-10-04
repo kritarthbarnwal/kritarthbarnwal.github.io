@@ -1693,23 +1693,29 @@
     const contactForm = document.getElementById("contact-form");
     const reviewForm = document.getElementById("review-form");
 
-    contactForm?.addEventListener("submit", (event) => {
-      event.preventDefault();
-      submitToFormSubmit(
-        contactForm,
-        "Message received.",
-        "Thanks — I'll get back to you soon."
-      );
-    });
+    // Capture the submit event before any submit handler inside script.js.
+    // This prevents two handlers from fighting over the button state.
+    function attachFormHandler(form, successTitle, successMessage) {
+      if (!form) return;
 
-    reviewForm?.addEventListener("submit", (event) => {
-      event.preventDefault();
-      submitToFormSubmit(
-        reviewForm,
-        "Review received.",
-        "Thanks for sharing your feedback."
-      );
-    });
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        submitToFormSubmit(form, successTitle, successMessage);
+      }, true);
+    }
+
+    attachFormHandler(
+      contactForm,
+      "Message received.",
+      "Thanks — I'll get back to you soon."
+    );
+
+    attachFormHandler(
+      reviewForm,
+      "Review received.",
+      "Thanks for sharing your feedback."
+    );
   })();
   </script>
 
