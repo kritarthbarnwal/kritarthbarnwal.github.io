@@ -1621,87 +1621,87 @@
       toast.style.display = "none";
     });
 
-    async function submitToFormSubmit(form, successTitle, successMessage) {
+    function submitWithoutLeavingPage(form, successTitle, successMessage) {
       const button = form.querySelector('button[type="submit"]');
       const originalText = button?.innerHTML || "";
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 12000);
+      const originalTarget = form.getAttribute("target");
+      const originalAction = form.getAttribute("action");
 
       if (button) {
         button.disabled = true;
         button.textContent = "Sending...";
       }
 
-      try {
-        const formData = new FormData(form);
+      // A hidden iframe lets FormSubmit receive the normal POST request
+      // without redirecting the visitor or changing the page position.
+      const frameName = "formsubmit-frame-" + Date.now();
+      const iframe = document.createElement("iframe");
+      iframe.name = frameName;
+      iframe.title = "Form submission";
+      iframe.style.position = "fixed";
+      iframe.style.width = "1px";
+      iframe.style.height = "1px";
+      iframe.style.opacity = "0";
+      iframe.style.pointerEvents = "none";
+      iframe.style.border = "0";
+      iframe.style.left = "-9999px";
+      document.body.appendChild(iframe);
 
-        const response = await fetch(
-          "https://formsubmit.co/ajax/kritarthbarnwal26@gmail.com",
-          {
-            method: "POST",
-            headers: {
-              "Accept": "application/json"
-            },
-            body: formData,
-            signal: controller.signal
-          }
-        );
+      let finished = false;
+      let timer;
 
-        const text = await response.text();
-        let result = null;
+      const finish = (success) => {
+        if (finished) return;
+        finished = true;
+        clearTimeout(timer);
 
-        try {
-          result = text ? JSON.parse(text) : null;
-        } catch {
-          // Some responses may not be JSON. The HTTP status still matters.
-        }
+        form.removeAttribute("target");
+        if (originalTarget) form.setAttribute("target", originalTarget);
+        if (originalAction) form.setAttribute("action", originalAction);
 
-        console.log("FormSubmit response:", response.status, result || text);
-
-        if (!response.ok || (result && result.success === false)) {
-          const backendMessage = result?.message || "FormSubmit rejected the request.";
-          throw new Error(backendMessage);
-        }
-
-        form.reset();
-        showToast(successTitle, successMessage, false);
-      } catch (error) {
-        console.error("FormSubmit error:", error);
-
-        if (error?.name === "AbortError") {
-          showToast(
-            "The form took too long.",
-            "Please check your connection and try again.",
-            true
-          );
+        if (success) {
+          form.reset();
+          showToast(successTitle, successMessage, false);
         } else {
           showToast(
             "Message not sent.",
-            "FormSubmit could not accept the request. Please try again.",
+            "Please try again in a moment.",
             true
           );
         }
-      } finally {
-        clearTimeout(timeout);
+
         if (button) {
           button.disabled = false;
           button.innerHTML = originalText;
         }
-      }
+
+        setTimeout(() => iframe.remove(), 1000);
+      };
+
+      // The iframe loads once FormSubmit responds. We don't inspect the
+      // cross-origin response; the load itself confirms the request completed.
+      iframe.addEventListener("load", () => finish(true), { once: true });
+
+      // Safety fallback: never leave the button stuck forever.
+      timer = setTimeout(() => finish(false), 15000);
+
+      form.setAttribute("target", frameName);
+
+      // Native POST, but bypass the submit event so script.js cannot
+      // intercept it or put the button back into a permanent Sending state.
+      HTMLFormElement.prototype.submit.call(form);
     }
 
     const contactForm = document.getElementById("contact-form");
     const reviewForm = document.getElementById("review-form");
 
-    // Capture the submit event before any submit handler inside script.js.
-    // This prevents two handlers from fighting over the button state.
     function attachFormHandler(form, successTitle, successMessage) {
       if (!form) return;
 
       form.addEventListener("submit", (event) => {
         event.preventDefault();
         event.stopImmediatePropagation();
-        submitToFormSubmit(form, successTitle, successMessage);
+        submitWithoutLeavingPage(form, successTitle, successMessage);
       }, true);
     }
 
