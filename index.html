@@ -757,197 +757,70 @@
         <div>
 
           <h2>
-            Real work.<br>
-            <span>Real feedback.</span>
+            The way I work.<br>
+            <span>What I value.</span>
           </h2>
 
         </div>
 
 
         <p>
-          Great websites are built around great collaboration.
-          Here's where genuine client feedback will live.
+          These are the principles I bring to projects. Genuine client testimonials can be added here as they come in.
         </p>
 
       </div>
 
 
-      <!-- REVIEW CARDS -->
+      <!-- PORTFOLIO HIGHLIGHTS (not fabricated client testimonials) -->
 
       <div class="reviews-grid">
 
-
-        <!-- REVIEW CARD 01 -->
-
         <article class="review-card">
-
           <div class="review-top">
-
-            <span class="review-number">
-              01
-            </span>
-
-            <div class="stars">
-              &#9733;&#9733;&#9733;&#9733;&#9733;
-            </div>
-
+            <span class="review-number">01</span>
+            <div class="stars" aria-label="Focus area">DESIGN</div>
           </div>
-
-
           <div class="review-content">
-
-            <div class="review-mark">
-              “
-            </div>
-
-            <h3>
-              Your feedback could be here.
-            </h3>
-
-            <p>
-              Complete a project with me and share your
-              experience. Your review could be featured here.
-            </p>
-
+            <div class="review-mark">“</div>
+            <h3>Clear, modern design.</h3>
+            <p>I aim to create clean layouts that make each website easy to explore and understand.</p>
           </div>
-
-
           <div class="review-author">
-
-            <div class="review-avatar">
-              ?
-            </div>
-
-            <div>
-
-              <strong>
-                Future Client
-              </strong>
-
-              <span>
-                Your project
-              </span>
-
-            </div>
-
+            <div class="review-avatar">D</div>
+            <div><strong>Design priority</strong><span>Every project</span></div>
           </div>
-
         </article>
 
-
-        <!-- REVIEW CARD 02 -->
-
         <article class="review-card">
-
           <div class="review-top">
-
-            <span class="review-number">
-              02
-            </span>
-
-            <div class="stars">
-              &#9733;&#9733;&#9733;&#9733;&#9733;
-            </div>
-
+            <span class="review-number">02</span>
+            <div class="stars" aria-label="Focus area">RESPONSIVE</div>
           </div>
-
-
           <div class="review-content">
-
-            <div class="review-mark">
-              “
-            </div>
-
-            <h3>
-              Good work deserves good feedback.
-            </h3>
-
-            <p>
-              After working together, I'd love to hear
-              what you thought about the process.
-            </p>
-
+            <div class="review-mark">“</div>
+            <h3>Built for every screen.</h3>
+            <p>From phones to desktop displays, I focus on making the experience feel consistent and usable.</p>
           </div>
-
-
           <div class="review-author">
-
-            <div class="review-avatar">
-              ?
-            </div>
-
-            <div>
-
-              <strong>
-                Future Client
-              </strong>
-
-              <span>
-                Website Project
-              </span>
-
-            </div>
-
+            <div class="review-avatar">R</div>
+            <div><strong>Responsive approach</strong><span>Mobile to desktop</span></div>
           </div>
-
         </article>
 
-
-        <!-- REVIEW CARD 03 -->
-
         <article class="review-card">
-
           <div class="review-top">
-
-            <span class="review-number">
-              03
-            </span>
-
-            <div class="stars">
-              &#9733;&#9733;&#9733;&#9733;&#9733;
-            </div>
-
+            <span class="review-number">03</span>
+            <div class="stars" aria-label="Focus area">COLLABORATION</div>
           </div>
-
-
           <div class="review-content">
-
-            <div class="review-mark">
-              “
-            </div>
-
-            <h3>
-              Your experience matters.
-            </h3>
-
-            <p>
-              Real client experiences will be featured here
-              as I continue building my freelance journey.
-            </p>
-
+            <div class="review-mark">“</div>
+            <h3>Communication matters.</h3>
+            <p>I value clear project goals, useful feedback and keeping the work aligned with what the client needs.</p>
           </div>
-
-
           <div class="review-author">
-
-            <div class="review-avatar">
-              ?
-            </div>
-
-            <div>
-
-              <strong>
-                Future Client
-              </strong>
-
-              <span>
-                Coming soon
-              </span>
-
-            </div>
-
+            <div class="review-avatar">C</div>
+            <div><strong>Working together</strong><span>Project process</span></div>
           </div>
-
         </article>
 
       </div>
@@ -1685,27 +1558,13 @@
         }
 
         form.reset();
-        if (status) {
-          status.textContent =
-            "Submission accepted by the form service. Email delivery is not guaranteed; if you need a quick reply, email kritarthbarnwal@yahoo.com directly.";
-        }
+        if (status) status.textContent = "";
 
-        showToast(
-          successTitle,
-          "The form service accepted your submission, but this does not confirm email delivery. If urgent, email kritarthbarnwal@yahoo.com directly.",
-          false
-        );
+        showToast(successTitle, successMessage, false);
       } catch (error) {
         console.error("Portfolio form submission error:", error);
-        if (status) {
-          status.textContent =
-            "We couldn't confirm the submission. Please try again later or email kritarthbarnwal@yahoo.com directly.";
-        }
-        showToast(
-          "Submission not confirmed",
-          "FormSubmit did not confirm the submission. Please try again later or email kritarthbarnwal@yahoo.com directly.",
-          true
-        );
+        if (status) status.textContent = "";
+        showToast("Submission not confirmed", "Please try again.", true);
       } finally {
         if (button) {
           button.disabled = false;
