@@ -1605,7 +1605,7 @@
     let toastTimer;
 
     function showToast(title, message, isError = false) {
-      if (!toast) return;
+      if (!toast || !toastTitle || !toastMessage || !toastIcon) return;
 
       clearTimeout(toastTimer);
       toastTitle.textContent = title;
@@ -1618,7 +1618,7 @@
 
       toastTimer = setTimeout(() => {
         toast.style.display = "none";
-      }, 5000);
+      }, 7000);
     }
 
     toastClose?.addEventListener("click", () => {
@@ -1626,79 +1626,93 @@
       toast.style.display = "none";
     });
 
-    function submitWithoutLeavingPage(form, successTitle, successMessage) {
+    async function submitForm(form, successTitle, successMessage) {
       const button = form.querySelector('button[type="submit"]');
-      const originalText = button?.innerHTML || "";
-      const originalTarget = form.getAttribute("target");
-      const originalAction = form.getAttribute("action");
+      const originalText = button?.innerHTML || "Submit";
+      const endpoint = form.getAttribute("action");
+      const status = form.querySelector("#review-status, #form-status");
+
+      if (!endpoint || !endpoint.startsWith("https://formsubmit.co/")) {
+        showToast(
+          "Form setup error",
+          "The form endpoint is missing or invalid. Please email kritarthbarnwal@yahoo.com directly.",
+          true
+        );
+        return;
+      }
 
       if (button) {
         button.disabled = true;
         button.textContent = "Sending...";
       }
+      if (status) status.textContent = "Sending your message…";
 
-      // A hidden iframe lets FormSubmit receive the normal POST request
-      // without redirecting the visitor or changing the page position.
-      const frameName = "formsubmit-frame-" + Date.now();
-      const iframe = document.createElement("iframe");
-      iframe.name = frameName;
-      iframe.title = "Form submission";
-      iframe.style.position = "fixed";
-      iframe.style.width = "1px";
-      iframe.style.height = "1px";
-      iframe.style.opacity = "0";
-      iframe.style.pointerEvents = "none";
-      iframe.style.border = "0";
-      iframe.style.left = "-9999px";
-      document.body.appendChild(iframe);
+      try {
+        const ajaxEndpoint = endpoint.replace(
+          "https://formsubmit.co/",
+          "https://formsubmit.co/ajax/"
+        );
 
-      let finished = false;
-      let timer;
+        const payload = Object.fromEntries(new FormData(form).entries());
+        const response = await fetch(ajaxEndpoint, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify(payload)
+        });
 
-      const finish = (success) => {
-        if (finished) return;
-        finished = true;
-        clearTimeout(timer);
+        let result;
+        try {
+          result = await response.json();
+        } catch {
+          throw new Error("The form service returned an unreadable response.");
+        }
 
-        form.removeAttribute("target");
-        if (originalTarget) form.setAttribute("target", originalTarget);
-        if (originalAction) form.setAttribute("action", originalAction);
+        const accepted = response.ok && (
+          result.success === true ||
+          result.success === "true" ||
+          result.success === 1
+        );
 
-        if (success) {
-          form.reset();
-          showToast(successTitle, successMessage, false);
-        } else {
-          showToast(
-            "Message not sent.",
-            "Please try again in a moment.",
-            true
+        if (!accepted) {
+          throw new Error(
+            typeof result.message === "string"
+              ? result.message
+              : "The form service did not confirm this submission."
           );
         }
 
+        form.reset();
+        if (status) {
+          status.textContent =
+            "Submission accepted by the form service. Email delivery is not guaranteed; if you need a quick reply, email kritarthbarnwal@yahoo.com directly.";
+        }
+
+        showToast(
+          successTitle,
+          "The form service accepted your submission, but this does not confirm email delivery. If urgent, email kritarthbarnwal@yahoo.com directly.",
+          false
+        );
+      } catch (error) {
+        console.error("Portfolio form submission error:", error);
+        if (status) {
+          status.textContent =
+            "We couldn't confirm the submission. Please try again later or email kritarthbarnwal@yahoo.com directly.";
+        }
+        showToast(
+          "Submission not confirmed",
+          "FormSubmit did not confirm the submission. Please try again later or email kritarthbarnwal@yahoo.com directly.",
+          true
+        );
+      } finally {
         if (button) {
           button.disabled = false;
           button.innerHTML = originalText;
         }
-
-        setTimeout(() => iframe.remove(), 1000);
-      };
-
-      // The iframe loads once FormSubmit responds. We don't inspect the
-      // cross-origin response; the load itself confirms the request completed.
-      iframe.addEventListener("load", () => finish(true), { once: true });
-
-      // Safety fallback: never leave the button stuck forever.
-      timer = setTimeout(() => finish(false), 15000);
-
-      form.setAttribute("target", frameName);
-
-      // Native POST, but bypass the submit event so script.js cannot
-      // intercept it or put the button back into a permanent Sending state.
-      HTMLFormElement.prototype.submit.call(form);
+      }
     }
-
-    const contactForm = document.getElementById("contact-form");
-    const reviewForm = document.getElementById("review-form");
 
     function attachFormHandler(form, successTitle, successMessage) {
       if (!form) return;
@@ -1706,19 +1720,19 @@
       form.addEventListener("submit", (event) => {
         event.preventDefault();
         event.stopImmediatePropagation();
-        submitWithoutLeavingPage(form, successTitle, successMessage);
+        submitForm(form, successTitle, successMessage);
       }, true);
     }
 
     attachFormHandler(
-      contactForm,
-      "Message received.",
-      "Thanks — I'll get back to you soon."
+      document.getElementById("contact-form"),
+      "Submission accepted",
+      "Thanks for reaching out."
     );
 
     attachFormHandler(
-      reviewForm,
-      "Review received.",
+      document.getElementById("review-form"),
+      "Review submission accepted",
       "Thanks for sharing your feedback."
     );
   })();
